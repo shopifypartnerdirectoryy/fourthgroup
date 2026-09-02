@@ -107,3 +107,103 @@ export const process = [
     text: "Live links, real positions, plain numbers. You always know where the book is and what happened next.",
   },
 ];
+
+export const serviceDetails: Record<
+  string,
+  { intro: string; deliverables: string[]; timeline: string; ideal: string }
+> = {
+  "goodreads-listopia": {
+    intro:
+      "Listopia is where readers browse by mood, genre and theme long before they browse by bestseller rank. We work your title onto the lists that match it and build genuine voting momentum behind it.",
+    deliverables: [
+      "List research and shortlist tailored to the book",
+      "Placement and voting campaign run over several weeks",
+      "Live link report so every position can be checked",
+      "Post-campaign position hold review",
+    ],
+    timeline: "Typically 3 to 6 weeks",
+    ideal: "Authors with a published title who need discovery rather than more ads.",
+  },
+  "book-trailers": {
+    intro:
+      "A trailer is a short film, not a slideshow. We read the manuscript, write the script from it, then score, shoot or source, edit and grade a piece that lets a reader feel the book.",
+    deliverables: [
+      "Script and storyboard written with the author",
+      "Original score and full sound design",
+      "Colour grade and final master",
+      "Cut-downs for Instagram, TikTok, YouTube and Amazon",
+    ],
+    timeline: "Typically 4 to 8 weeks",
+    ideal: "Launches, relaunches and awards pushes that need one strong asset.",
+  },
+  "author-websites": {
+    intro:
+      "Your website is the only place online you fully control. We design and build an editorial home that reads like a first edition and turns visitors into subscribers.",
+    deliverables: [
+      "Bespoke design, no themes or page builders",
+      "Books, events and press sections",
+      "Newsletter and retailer integrations",
+      "Fast, accessible build with SEO groundwork",
+    ],
+    timeline: "Typically 4 to 6 weeks",
+    ideal: "Authors with more than one title, or a launch that needs a proper home.",
+  },
+  "amazon-seo": {
+    intro:
+      "Most books are invisible because of their categories and keywords, not their writing. We rebuild the listing around how buyers in your genre actually search.",
+    deliverables: [
+      "Backend keyword and category architecture",
+      "Title, subtitle and description rewriting",
+      "A+ content layout and copy",
+      "Monthly competitive rank tracking",
+    ],
+    timeline: "Typically 1 to 2 weeks, then monthly review",
+    ideal: "Published titles with good reviews but weak visibility.",
+  },
+};
+
+export const faqs = [
+  {
+    q: "How many books do you take on?",
+    a: "A small number each quarter. We would rather turn a book down than give it half the attention it needs.",
+  },
+  {
+    q: "Do you read the manuscript first?",
+    a: "Always. Nothing is proposed and nothing is priced until we have read the book and looked at the market it lands in.",
+  },
+  {
+    q: "Can I book a single service?",
+    a: "Yes. Listopia, trailers, websites and Amazon work can each run on their own, or be sequenced into one campaign.",
+  },
+  {
+    q: "What does it cost?",
+    a: "Listopia placement packages start from $95. Trailers, websites and listing work are quoted per book once we know the scope.",
+  },
+  {
+    q: "How do I see results?",
+    a: "Live links and real positions. You can check every placement yourself, during the campaign and after it ends.",
+  },
+  {
+    q: "Do you work with debut authors?",
+    a: "Often. A first book with a clear reader is easier to move than a fifth with none.",
+  },
+];
+
+export const reasons = [
+  {
+    title: "We read before we pitch",
+    text: "Strategy comes out of the manuscript, not a template deck reused from the last client.",
+  },
+  {
+    title: "Made in house",
+    text: "The people who scope the work make the work. Nothing is passed to a freelancer marketplace.",
+  },
+  {
+    title: "Checkable reporting",
+    text: "Live links and plain numbers. If a position moved, you can see it yourself.",
+  },
+  {
+    title: "A short client list",
+    text: "Capacity is deliberately limited so every book keeps a director's attention.",
+  },
+];
