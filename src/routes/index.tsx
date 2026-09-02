@@ -2,8 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { services, team, process } from "@/components/site/data";
+import { services, team, process, reasons, faqs } from "@/components/site/data";
+import { reel } from "@/components/site/reel";
 import hero from "@/assets/hero-library.jpg";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
