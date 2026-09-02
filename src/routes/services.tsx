@@ -60,9 +60,19 @@ function Services() {
                   {p}
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/services/$slug"
+                  params={{ slug: s.slug }}
+                  className="mt-4 inline-block text-[0.7rem] uppercase tracking-[0.22em] text-navy hover:text-gold"
+                >
+                  Explore this service →
+                </Link>
+              </li>
             </ul>
           </section>
         ))}
+
       </div>
 
       <section className="mx-auto max-w-3xl px-6 py-24 text-center">

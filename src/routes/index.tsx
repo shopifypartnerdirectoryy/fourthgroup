@@ -2,8 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { services, team, process } from "@/components/site/data";
+import { services, team, process, reasons, faqs } from "@/components/site/data";
+import { reel } from "@/components/site/reel";
 import hero from "@/assets/hero-library.jpg";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -139,7 +141,8 @@ function Home() {
                   </p>
                 </div>
                 <Link
-                  to="/services"
+                  to="/services/$slug"
+                  params={{ slug: s.slug }}
                   className="inline-flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.22em] text-navy hover:text-gold"
                 >
                   Explore <ArrowRight className="h-3.5 w-3.5" />
@@ -149,6 +152,66 @@ function Home() {
           ))}
         </div>
       </section>
+
+      <section className="surface-navy border-y border-gold/15">
+        <div className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <p className="eyebrow">The reel</p>
+              <h2 className="mt-5 max-w-2xl text-4xl leading-tight text-cream sm:text-5xl">
+                Trailers made <span className="italic text-gold">like short films.</span>
+              </h2>
+            </div>
+            <Link
+              to="/work"
+              className="text-[0.72rem] uppercase tracking-[0.22em] text-gold hover:text-gold-soft"
+            >
+              View full portfolio →
+            </Link>
+          </div>
+
+          <div className="mt-16 grid gap-10 md:grid-cols-2">
+            {reel.map((r) => (
+              <article key={r.title} className="group">
+                <div className="relative overflow-hidden">
+                  <img
+                    src={r.image}
+                    alt={r.alt}
+                    width={1280}
+                    height={720}
+                    loading="lazy"
+                    className="aspect-video w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                  <span className="absolute bottom-4 right-4 bg-navy-deep/80 px-3 py-1 text-[0.66rem] tracking-[0.18em] text-cream/80">
+                    {r.length}
+                  </span>
+                </div>
+                <p className="mt-5 text-[0.66rem] uppercase tracking-[0.22em] text-gold">
+                  {r.genre}
+                </p>
+                <h3 className="mt-3 text-2xl text-cream">{r.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-cream/60">{r.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
+        <p className="eyebrow">Why authors stay</p>
+        <h2 className="mt-5 max-w-2xl text-4xl leading-tight sm:text-5xl">
+          Four habits we <span className="italic text-gold">refuse to drop.</span>
+        </h2>
+        <div className="mt-16 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
+          {reasons.map((r) => (
+            <div key={r.title} className="bg-background p-8">
+              <h3 className="text-xl">{r.title}</h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{r.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
 
       <section className="surface-navy">
         <div className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
@@ -199,6 +262,25 @@ function Home() {
           ))}
         </div>
       </section>
+
+      <section className="border-t border-border bg-secondary/50">
+        <div className="mx-auto max-w-4xl px-6 py-28">
+          <p className="eyebrow text-center">Questions</p>
+          <h2 className="mt-5 text-center text-4xl leading-tight sm:text-5xl">
+            The things authors <span className="italic text-gold">ask us first.</span>
+          </h2>
+          <dl className="mt-14 divide-y divide-border border-y border-border">
+            {faqs.map((f) => (
+              <div key={f.q} className="grid gap-3 py-7 md:grid-cols-[1fr_1.4fr] md:gap-10">
+                <dt className="text-xl leading-snug">{f.q}</dt>
+                <dd className="text-sm leading-relaxed text-muted-foreground">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+
 
       <section className="surface-navy border-t border-gold/20">
         <div className="mx-auto max-w-3xl px-6 py-28 text-center">
