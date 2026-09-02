@@ -263,6 +263,25 @@ function Home() {
         </div>
       </section>
 
+      <section className="border-t border-border bg-secondary/50">
+        <div className="mx-auto max-w-4xl px-6 py-28">
+          <p className="eyebrow text-center">Questions</p>
+          <h2 className="mt-5 text-center text-4xl leading-tight sm:text-5xl">
+            The things authors <span className="italic text-gold">ask us first.</span>
+          </h2>
+          <dl className="mt-14 divide-y divide-border border-y border-border">
+            {faqs.map((f) => (
+              <div key={f.q} className="grid gap-3 py-7 md:grid-cols-[1fr_1.4fr] md:gap-10">
+                <dt className="text-xl leading-snug">{f.q}</dt>
+                <dd className="text-sm leading-relaxed text-muted-foreground">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+
+
       <section className="surface-navy border-t border-gold/20">
         <div className="mx-auto max-w-3xl px-6 py-28 text-center">
           <p className="eyebrow">Next step</p>
