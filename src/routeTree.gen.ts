@@ -11,8 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as ClientLoginRouteImport } from './routes/client-login'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SuccessStoriesRouteImport } from './routes/success-stories'
 import { Route as WorkRouteImport } from './routes/work'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 
@@ -26,14 +31,39 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ClientLoginRoute = ClientLoginRouteImport.update({
+  id: '/client-login',
+  path: '/client-login',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SuccessStoriesRoute = SuccessStoriesRouteImport.update({
+  id: '/success-stories',
+  path: '/success-stories',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkRoute = WorkRouteImport.update({
@@ -50,16 +80,26 @@ const ServicesSlugRoute = ServicesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/client-login': typeof ClientLoginRoute
   '/contact': typeof ContactRoute
+  '/portfolio': typeof PortfolioRoute
+  '/pricing': typeof PricingRoute
+  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRouteWithChildren
+  '/success-stories': typeof SuccessStoriesRoute
   '/work': typeof WorkRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/client-login': typeof ClientLoginRoute
   '/contact': typeof ContactRoute
+  '/portfolio': typeof PortfolioRoute
+  '/pricing': typeof PricingRoute
+  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRouteWithChildren
+  '/success-stories': typeof SuccessStoriesRoute
   '/work': typeof WorkRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
@@ -67,23 +107,54 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/client-login': typeof ClientLoginRoute
   '/contact': typeof ContactRoute
+  '/portfolio': typeof PortfolioRoute
+  '/pricing': typeof PricingRoute
+  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRouteWithChildren
+  '/success-stories': typeof SuccessStoriesRoute
   '/work': typeof WorkRoute
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/contact' | '/services' | '/work' | '/services/$slug'
+    | '/'
+    | '/about'
+    | '/client-login'
+    | '/contact'
+    | '/portfolio'
+    | '/pricing'
+    | '/reviews'
+    | '/services'
+    | '/success-stories'
+    | '/work'
+    | '/services/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/services' | '/work' | '/services/$slug'
+  to:
+    | '/'
+    | '/about'
+    | '/client-login'
+    | '/contact'
+    | '/portfolio'
+    | '/pricing'
+    | '/reviews'
+    | '/services'
+    | '/success-stories'
+    | '/work'
+    | '/services/$slug'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/client-login'
     | '/contact'
+    | '/portfolio'
+    | '/pricing'
+    | '/reviews'
     | '/services'
+    | '/success-stories'
     | '/work'
     | '/services/$slug'
   fileRoutesById: FileRoutesById
@@ -91,8 +162,13 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ClientLoginRoute: typeof ClientLoginRoute
   ContactRoute: typeof ContactRoute
+  PortfolioRoute: typeof PortfolioRoute
+  PricingRoute: typeof PricingRoute
+  ReviewsRoute: typeof ReviewsRoute
   ServicesRoute: typeof ServicesRouteWithChildren
+  SuccessStoriesRoute: typeof SuccessStoriesRoute
   WorkRoute: typeof WorkRoute
 }
 
@@ -112,6 +188,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/client-login': {
+      id: '/client-login'
+      path: '/client-login'
+      fullPath: '/client-login'
+      preLoaderRoute: typeof ClientLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -119,11 +202,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/success-stories': {
+      id: '/success-stories'
+      path: '/success-stories'
+      fullPath: '/success-stories'
+      preLoaderRoute: typeof SuccessStoriesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work': {
@@ -158,8 +269,13 @@ const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ClientLoginRoute: ClientLoginRoute,
   ContactRoute: ContactRoute,
+  PortfolioRoute: PortfolioRoute,
+  PricingRoute: PricingRoute,
+  ReviewsRoute: ReviewsRoute,
   ServicesRoute: ServicesRouteWithChildren,
+  SuccessStoriesRoute: SuccessStoriesRoute,
   WorkRoute: WorkRoute,
 }
 export const routeTree = rootRouteImport
