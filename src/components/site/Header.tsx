@@ -5,10 +5,13 @@ import logo from "@/assets/logo.png.asset.json";
 
 const nav = [
   { to: "/services", label: "Services" },
-  { to: "/work", label: "Work" },
+  { to: "/portfolio", label: "Portfolio" },
+  { to: "/success-stories", label: "Success Stories" },
+  { to: "/pricing", label: "Pricing" },
   { to: "/about", label: "About" },
+  { to: "/reviews", label: "Reviews" },
   { to: "/contact", label: "Contact" },
-];
+] as const;
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -41,20 +44,27 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-9 md:flex">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-7">
           {nav.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="text-[0.72rem] uppercase tracking-[0.22em] text-cream/75 transition-colors hover:text-gold"
+              className="text-[0.66rem] uppercase tracking-[0.18em] text-cream/75 transition-colors hover:text-gold"
               activeProps={{ className: "text-gold" }}
             >
               {item.label}
             </Link>
           ))}
           <Link
+            to="/client-login"
+            className="text-[0.66rem] uppercase tracking-[0.18em] text-cream/50 transition-colors hover:text-gold"
+            activeProps={{ className: "text-gold" }}
+          >
+            Client Login
+          </Link>
+          <Link
             to="/contact"
-            className="border border-gold/60 px-5 py-2.5 text-[0.72rem] uppercase tracking-[0.22em] text-gold transition-colors hover:bg-gold hover:text-navy-deep"
+            className="border border-gold/60 px-4 py-2.5 text-[0.66rem] uppercase tracking-[0.18em] text-gold transition-colors hover:bg-gold hover:text-navy-deep"
           >
             Start a project
           </Link>
@@ -63,7 +73,7 @@ export function Header() {
         <button
           type="button"
           aria-label="Toggle menu"
-          className="text-cream md:hidden"
+          className="text-cream lg:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -71,7 +81,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-gold/20 bg-navy-deep px-6 py-6 md:hidden">
+        <div className="border-t border-gold/20 bg-navy-deep px-6 py-6 lg:hidden">
           <div className="flex flex-col gap-5">
             {nav.map((item) => (
               <Link
@@ -83,6 +93,13 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              to="/client-login"
+              onClick={() => setOpen(false)}
+              className="text-sm uppercase tracking-[0.22em] text-cream/50"
+            >
+              Client Login
+            </Link>
           </div>
         </div>
       )}
