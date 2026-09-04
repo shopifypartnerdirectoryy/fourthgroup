@@ -87,6 +87,49 @@ function About() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+        <div className="grid gap-16 md:grid-cols-[1fr_1fr]">
+          <div>
+            <p className="eyebrow">What we look for</p>
+            <h2 className="mt-5 text-4xl">
+              We say yes <span className="italic text-gold">carefully.</span>
+            </h2>
+            <ul className="mt-10 space-y-5">
+              {[
+                "A finished manuscript, or one close enough to read properly.",
+                "A reader you can describe in a sentence.",
+                "A launch window that leaves time to make something good.",
+                "An author who wants a plan, not a package.",
+              ].map((t) => (
+                <li key={t} className="flex gap-4 border-b border-border pb-5 text-sm">
+                  <span className="mt-2 h-px w-6 shrink-0 bg-gold" />
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="h-fit border border-border p-10">
+            <p className="eyebrow">Submit your manuscript</p>
+            <h3 className="mt-5 text-2xl">Send the book, not a brief.</h3>
+            <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+              Email the manuscript or a sample with your title, genre and launch date. We read
+              everything ourselves, reply in under an hour, and come back with an honest view of
+              what we would do — whether or not you hire us.
+            </p>
+            <a
+              href="mailto:info@fourthgroupco.com?subject=Manuscript%20submission"
+              className="mt-8 block bg-navy px-8 py-4 text-center text-[0.72rem] uppercase tracking-[0.22em] text-cream transition-colors hover:bg-navy-deep"
+            >
+              Email your manuscript
+            </a>
+            <p className="mt-5 text-center text-[0.64rem] uppercase tracking-[0.18em] text-muted-foreground">
+              Four titles taken each quarter
+            </p>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
