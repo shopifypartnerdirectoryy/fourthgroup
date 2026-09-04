@@ -44,20 +44,27 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-9 md:flex">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-7">
           {nav.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="text-[0.72rem] uppercase tracking-[0.22em] text-cream/75 transition-colors hover:text-gold"
+              className="text-[0.66rem] uppercase tracking-[0.18em] text-cream/75 transition-colors hover:text-gold"
               activeProps={{ className: "text-gold" }}
             >
               {item.label}
             </Link>
           ))}
           <Link
+            to="/client-login"
+            className="text-[0.66rem] uppercase tracking-[0.18em] text-cream/50 transition-colors hover:text-gold"
+            activeProps={{ className: "text-gold" }}
+          >
+            Client Login
+          </Link>
+          <Link
             to="/contact"
-            className="border border-gold/60 px-5 py-2.5 text-[0.72rem] uppercase tracking-[0.22em] text-gold transition-colors hover:bg-gold hover:text-navy-deep"
+            className="border border-gold/60 px-4 py-2.5 text-[0.66rem] uppercase tracking-[0.18em] text-gold transition-colors hover:bg-gold hover:text-navy-deep"
           >
             Start a project
           </Link>
