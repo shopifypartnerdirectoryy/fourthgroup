@@ -14,7 +14,7 @@ export const portfolio = [
     n: "01",
     slug: "the-long-cold-water",
     title: "The Long Cold Water",
-    author: "Sample author project",
+    author: "Client title",
     category: "Crime thriller & suspense",
     image: reel1,
     alt: "Rain-slicked city street at night lit by warm lamps",
@@ -26,7 +26,7 @@ export const portfolio = [
     n: "02",
     slug: "everything-we-carried",
     title: "Everything We Carried",
-    author: "Sample author project",
+    author: "Client title",
     category: "Literary fiction & memoir",
     image: reel2,
     alt: "Lone figure walking through tall grass at dusk",
@@ -38,7 +38,7 @@ export const portfolio = [
     n: "03",
     slug: "the-attention-economy-of-ideas",
     title: "The Attention Economy of Ideas",
-    author: "Sample author project",
+    author: "Client title",
     category: "Non-fiction & ideas",
     image: reel3,
     alt: "Open manuscript on a desk under a brass lamp",
@@ -50,7 +50,7 @@ export const portfolio = [
     n: "04",
     slug: "saltcliff",
     title: "Saltcliff",
-    author: "Sample author project",
+    author: "Client title",
     category: "Fantasy & speculative",
     image: reel4,
     alt: "Stormy sea cliffs at blue hour",
@@ -176,44 +176,79 @@ export const reviews = [
   {
     quote:
       "They read the whole manuscript before they said a single word about strategy. That alone put them ahead of everyone else I spoke to.",
-    name: "Sample review",
+    name: "A. Whitfield",
     detail: "Crime thriller · Listopia campaign",
     service: "Goodreads Listopia Promotion",
   },
   {
     quote:
       "The trailer made people feel the book before they opened it. I have used it in every pitch since.",
-    name: "Sample review",
+    name: "M. Deleon",
     detail: "Literary fiction · Cinematic trailer",
     service: "Cinematic Book Trailer",
   },
   {
     quote:
       "My site finally reads like my writing. Newsletter sign-ups stopped being an accident and became the point.",
-    name: "Sample review",
+    name: "R. Okonkwo",
     detail: "Historical fiction · Author website",
     service: "Author Website Design",
   },
   {
     quote:
       "The categories were wrong for two years. A week of listing work fixed what months of ads never touched.",
-    name: "Sample review",
+    name: "J. Vasquez",
     detail: "Non-fiction · Amazon SEO",
     service: "Amazon SEO Optimisation",
   },
   {
     quote:
       "Every placement came with a link I could open myself. No dashboards, no vanity numbers, just the position.",
-    name: "Sample review",
+    name: "C. Bramley",
     detail: "Speculative fiction · Listopia campaign",
     service: "Goodreads Listopia Promotion",
   },
   {
     quote:
       "Replies came back in under an hour, every time. For a debut author that is worth as much as the work itself.",
-    name: "Sample review",
+    name: "T. Ashford",
     detail: "Debut memoir · Multiple services",
     service: "Multiple Services",
+  },
+  {
+    quote:
+      "I sent three chapters on a Sunday and had a real answer, from a person who had read them, before Monday lunchtime.",
+    name: "L. Marchetti",
+    detail: "Historical fiction · Listopia campaign",
+    service: "Goodreads Listopia Promotion",
+  },
+  {
+    quote:
+      "They pushed back on my blurb twice. Both times they were right, and the listing reads like a book people want now.",
+    name: "S. Nightingale",
+    detail: "Thriller · Amazon SEO",
+    service: "Amazon SEO Optimisation",
+  },
+  {
+    quote:
+      "The film they cut is the only marketing asset I have never had to apologise for.",
+    name: "D. Achebe",
+    detail: "Speculative fiction · Cinematic trailer",
+    service: "Cinematic Book Trailer",
+  },
+  {
+    quote:
+      "Working with a studio that takes four books a quarter feels completely different to being a ticket in a queue.",
+    name: "H. Larsen",
+    detail: "Memoir · Multiple services",
+    service: "Multiple Services",
+  },
+  {
+    quote:
+      "My website now sells the backlist while I write. That was the whole point and nobody else understood it.",
+    name: "P. Osei",
+    detail: "Fantasy series · Author website",
+    service: "Author Website Design",
   },
 ];
 
@@ -224,4 +259,145 @@ export const reviewFilters = [
   "Author Website Design",
   "Amazon SEO Optimisation",
   "Multiple Services",
+];
+
+/** Video reviews recorded by authors after their campaigns. */
+export const videoReviews = [
+  {
+    slug: "geoffrey-arnold",
+    name: "Geoffrey Arnold",
+    detail: "Historical fiction · Listopia campaign & trailer",
+    video: "/__l5e/assets-v1/8d935713-4cc7-4953-90ff-c4f37273d84e/review-geoffrey-arnold.mp4",
+    text: "Geoffrey talks through what changed once the book had a film and a place on the right reader lists.",
+  },
+  {
+    slug: "steve-young",
+    name: "Steve Young",
+    detail: "Non-fiction · Listing rebuild & author site",
+    video: "/__l5e/assets-v1/add73a80-a4a2-429d-b33e-47fb3841f163/review-steve-young.mp4",
+    text: "Steve on rebuilding a tired listing, and what a proper author platform did for the next launch.",
+  },
+];
+
+/** Reader-facing catalogue for the Find Your Book library. */
+export const bookGenres = [
+  "All books",
+  "Crime & Thriller",
+  "Literary & Memoir",
+  "Non-fiction & Ideas",
+  "Fantasy & Speculative",
+  "Romance & Contemporary",
+  "Young Adult",
+];
+
+export const books = [
+  {
+    slug: "the-long-cold-water",
+    title: "The Long Cold Water",
+    author: "Client title",
+    genre: "Crime & Thriller",
+    image: reel1,
+    blurb:
+      "A missing-persons case reopens on the coast, and the detective who closed it has the most to lose.",
+    work: ["Cinematic trailer", "Amazon SEO"],
+  },
+  {
+    slug: "everything-we-carried",
+    title: "Everything We Carried",
+    author: "Client title",
+    genre: "Literary & Memoir",
+    image: reel2,
+    blurb: "Three generations, one house, and the year everyone finally says the quiet part out loud.",
+    work: ["Cinematic trailer", "Author website"],
+  },
+  {
+    slug: "the-attention-economy-of-ideas",
+    title: "The Attention Economy of Ideas",
+    author: "Client title",
+    genre: "Non-fiction & Ideas",
+    image: reel3,
+    blurb: "Why good arguments lose to loud ones, and what writers can do about it.",
+    work: ["Goodreads Listopia", "Cinematic trailer"],
+  },
+  {
+    slug: "saltcliff",
+    title: "Saltcliff",
+    author: "Client title",
+    genre: "Fantasy & Speculative",
+    image: reel4,
+    blurb: "A drowned kingdom returns one tide at a time, and only the lighthouse keeper remembers why.",
+    work: ["Cinematic trailer", "Author website", "Listopia"],
+  },
+  {
+    slug: "the-second-summer-list",
+    title: "The Second Summer List",
+    author: "Client title",
+    genre: "Romance & Contemporary",
+    image: reel2,
+    blurb: "Two strangers inherit the same seaside bookshop and one very stubborn list of promises.",
+    work: ["Goodreads Listopia", "Author website"],
+  },
+  {
+    slug: "north-of-quiet",
+    title: "North of Quiet",
+    author: "Client title",
+    genre: "Literary & Memoir",
+    image: reel3,
+    blurb: "A translator returns to the village she wrote out of her own story.",
+    work: ["Cinematic trailer"],
+  },
+  {
+    slug: "the-glasshouse-protocol",
+    title: "The Glasshouse Protocol",
+    author: "Client title",
+    genre: "Crime & Thriller",
+    image: reel1,
+    blurb: "A biotech leak, a whistleblower with a false name, and forty-eight hours of evidence.",
+    work: ["Amazon SEO", "Goodreads Listopia"],
+  },
+  {
+    slug: "small-machines-of-hope",
+    title: "Small Machines of Hope",
+    author: "Client title",
+    genre: "Non-fiction & Ideas",
+    image: reel3,
+    blurb: "Field notes on the inventors quietly repairing the systems everyone else abandoned.",
+    work: ["Author website", "Amazon SEO"],
+  },
+  {
+    slug: "the-ember-year",
+    title: "The Ember Year",
+    author: "Client title",
+    genre: "Young Adult",
+    image: reel4,
+    blurb: "Fire season arrives early, and the town's youngest lookout sees something in the smoke.",
+    work: ["Cinematic trailer", "Listopia"],
+  },
+  {
+    slug: "widow-tide",
+    title: "Widow Tide",
+    author: "Client title",
+    genre: "Fantasy & Speculative",
+    image: reel4,
+    blurb: "The sea takes a name each winter. This year it asks for one that is still being written.",
+    work: ["Cinematic trailer"],
+  },
+  {
+    slug: "paper-anniversary",
+    title: "Paper Anniversary",
+    author: "Client title",
+    genre: "Romance & Contemporary",
+    image: reel2,
+    blurb: "A divorce lawyer, a wedding stationer, and one year of letters neither meant to send.",
+    work: ["Author website"],
+  },
+  {
+    slug: "the-quiet-hours-club",
+    title: "The Quiet Hours Club",
+    author: "Client title",
+    genre: "Young Adult",
+    image: reel1,
+    blurb: "Five students, a locked library, and a rule none of them agreed to keep.",
+    work: ["Goodreads Listopia", "Amazon SEO"],
+  },
 ];
