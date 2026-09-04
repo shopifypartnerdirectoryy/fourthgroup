@@ -215,6 +215,41 @@ export const reviews = [
     detail: "Debut memoir · Multiple services",
     service: "Multiple Services",
   },
+  {
+    quote:
+      "I sent three chapters on a Sunday and had a real answer, from a person who had read them, before Monday lunchtime.",
+    name: "L. Marchetti",
+    detail: "Historical fiction · Listopia campaign",
+    service: "Goodreads Listopia Promotion",
+  },
+  {
+    quote:
+      "They pushed back on my blurb twice. Both times they were right, and the listing reads like a book people want now.",
+    name: "S. Nightingale",
+    detail: "Thriller · Amazon SEO",
+    service: "Amazon SEO Optimisation",
+  },
+  {
+    quote:
+      "The film they cut is the only marketing asset I have never had to apologise for.",
+    name: "D. Achebe",
+    detail: "Speculative fiction · Cinematic trailer",
+    service: "Cinematic Book Trailer",
+  },
+  {
+    quote:
+      "Working with a studio that takes four books a quarter feels completely different to being a ticket in a queue.",
+    name: "H. Larsen",
+    detail: "Memoir · Multiple services",
+    service: "Multiple Services",
+  },
+  {
+    quote:
+      "My website now sells the backlist while I write. That was the whole point and nobody else understood it.",
+    name: "P. Osei",
+    detail: "Fantasy series · Author website",
+    service: "Author Website Design",
+  },
 ];
 
 export const reviewFilters = [
@@ -239,7 +274,7 @@ export const videoReviews = [
     slug: "steve-young",
     name: "Steve Young",
     detail: "Non-fiction · Listing rebuild & author site",
-    video: "",
+    video: "/__l5e/assets-v1/add73a80-a4a2-429d-b33e-47fb3841f163/review-steve-young.mp4",
     text: "Steve on rebuilding a tired listing, and what a proper author platform did for the next launch.",
   },
 ];
