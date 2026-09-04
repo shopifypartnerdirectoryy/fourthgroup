@@ -5,10 +5,13 @@ import logo from "@/assets/logo.png.asset.json";
 
 const nav = [
   { to: "/services", label: "Services" },
-  { to: "/work", label: "Work" },
+  { to: "/portfolio", label: "Portfolio" },
+  { to: "/success-stories", label: "Success Stories" },
+  { to: "/pricing", label: "Pricing" },
   { to: "/about", label: "About" },
+  { to: "/reviews", label: "Reviews" },
   { to: "/contact", label: "Contact" },
-];
+] as const;
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
