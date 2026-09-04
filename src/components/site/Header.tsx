@@ -81,7 +81,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-gold/20 bg-navy-deep px-6 py-6 md:hidden">
+        <div className="border-t border-gold/20 bg-navy-deep px-6 py-6 lg:hidden">
           <div className="flex flex-col gap-5">
             {nav.map((item) => (
               <Link
@@ -93,6 +93,13 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              to="/client-login"
+              onClick={() => setOpen(false)}
+              className="text-sm uppercase tracking-[0.22em] text-cream/50"
+            >
+              Client Login
+            </Link>
           </div>
         </div>
       )}
