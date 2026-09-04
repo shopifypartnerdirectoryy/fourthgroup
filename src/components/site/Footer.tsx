@@ -35,18 +35,28 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/work" className="hover:text-gold">
-                  Work
+                <Link to="/portfolio" className="hover:text-gold">
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link to="/success-stories" className="hover:text-gold">
+                  Success Stories
+                </Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="hover:text-gold">
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link to="/reviews" className="hover:text-gold">
+                  Reviews
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="hover:text-gold">
                   About
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:text-gold">
-                  Contact
                 </Link>
               </li>
             </ul>
@@ -60,7 +70,17 @@ export function Footer() {
                   info@fourthgroupco.com
                 </a>
               </li>
-              <li>Replies within one business day</li>
+              <li>Replies in under one hour</li>
+              <li>
+                <Link to="/contact" className="hover:text-gold">
+                  Submit your manuscript
+                </Link>
+              </li>
+              <li>
+                <Link to="/client-login" className="hover:text-gold">
+                  Client login
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
