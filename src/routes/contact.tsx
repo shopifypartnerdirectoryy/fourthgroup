@@ -160,7 +160,7 @@ function Contact() {
           <div>
             <h2 className="eyebrow">Response time</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              We reply within one business day. If your launch date is close, say so in the first
+              We reply in under one hour on business days. If your launch date is close, say so in the first
               line and we will move you up.
             </p>
           </div>

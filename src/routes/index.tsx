@@ -70,7 +70,7 @@ function Home() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                to="/work"
+                to="/portfolio"
                 className="inline-flex items-center border border-cream/30 px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-cream transition-colors hover:border-gold hover:text-gold"
               >
                 View our work
@@ -163,7 +163,7 @@ function Home() {
               </h2>
             </div>
             <Link
-              to="/work"
+              to="/portfolio"
               className="text-[0.72rem] uppercase tracking-[0.22em] text-gold hover:text-gold-soft"
             >
               View full portfolio →
