@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { reviews, reviewFilters } from "@/components/site/showcase";
+import { reviews, reviewFilters, videoReviews } from "@/components/site/showcase";
 
 export const Route = createFileRoute("/reviews")({
   head: () => ({
@@ -11,12 +11,12 @@ export const Route = createFileRoute("/reviews")({
       {
         name: "description",
         content:
-          "Authors on working with Fourth Group & Co — reviews by service, from Listopia campaigns to trailers, websites and Amazon SEO.",
+          "Authors on working with Fourth Group & Co — written and filmed reviews by service, from Listopia campaigns to trailers, websites and Amazon SEO.",
       },
       { property: "og:title", content: "Reviews | Fourth Group & Co" },
       {
         property: "og:description",
-        content: "What authors say about working with the studio.",
+        content: "What authors say about working with the studio, in writing and on camera.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -44,6 +44,36 @@ function Reviews() {
             Every review published here is checked against a completed project first. Nothing is
             written for us, and nothing goes up without the author's permission.
           </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pt-24 lg:px-10">
+        <p className="eyebrow">On camera</p>
+        <h2 className="mt-5 text-4xl sm:text-5xl">
+          Authors, <span className="italic text-gold">in their own words.</span>
+        </h2>
+        <div className="mt-14 grid gap-10 md:grid-cols-2">
+          {videoReviews.map((v) => (
+            <figure key={v.slug}>
+              <video
+                src={v.video}
+                controls
+                preload="metadata"
+                playsInline
+                className="aspect-video w-full bg-navy-deep object-cover"
+              />
+              <figcaption className="mt-6">
+                <p className="text-[0.62rem] uppercase tracking-[0.2em] text-gold">
+                  Filmed review
+                </p>
+                <p className="mt-3 text-xl">{v.name}</p>
+                <p className="mt-1 text-[0.64rem] uppercase tracking-[0.18em] text-muted-foreground">
+                  {v.detail}
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{v.text}</p>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 
@@ -88,6 +118,8 @@ function Reviews() {
           </p>
         )}
 
+        <WriteReview />
+
         <div className="mt-20 text-center">
           <h2 className="text-3xl sm:text-4xl">
             Ready to write <span className="italic text-gold">the next one?</span>
@@ -102,6 +134,107 @@ function Reviews() {
       </section>
 
       <Footer />
+    </div>
+  );
+}
+
+function WriteReview() {
+  const [name, setName] = useState("");
+  const [book, setBook] = useState("");
+  const [service, setService] = useState(reviewFilters[1]!);
+  const [rating, setRating] = useState("5");
+  const [text, setText] = useState("");
+
+  const submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const body = [
+      `Name: ${name}`,
+      `Book: ${book}`,
+      `Service: ${service}`,
+      `Rating: ${rating}/5`,
+      "",
+      text,
+    ].join("\n");
+    window.location.href = `mailto:info@fourthgroupco.com?subject=${encodeURIComponent(
+      "Author review submission",
+    )}&body=${encodeURIComponent(body)}`;
+  };
+
+  return (
+    <div id="write-a-review" className="mt-24 border border-border p-10 lg:p-14">
+      <p className="eyebrow">Write a review</p>
+      <h2 className="mt-5 text-3xl sm:text-4xl">
+        Worked with us? <span className="italic text-gold">Tell the truth.</span>
+      </h2>
+      <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+        Reviews are published only after we confirm the project and you approve the wording. If you
+        would rather record a short video review, say so below and we will send a link.
+      </p>
+
+      <form onSubmit={submit} className="mt-10 grid gap-6 md:grid-cols-2">
+        <label className="text-[0.64rem] uppercase tracking-[0.18em] text-muted-foreground">
+          Your name
+          <input
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="mt-3 w-full border border-border bg-transparent px-4 py-3 text-sm normal-case tracking-normal text-foreground outline-none focus:border-gold"
+          />
+        </label>
+        <label className="text-[0.64rem] uppercase tracking-[0.18em] text-muted-foreground">
+          Book title
+          <input
+            required
+            value={book}
+            onChange={(e) => setBook(e.target.value)}
+            className="mt-3 w-full border border-border bg-transparent px-4 py-3 text-sm normal-case tracking-normal text-foreground outline-none focus:border-gold"
+          />
+        </label>
+        <label className="text-[0.64rem] uppercase tracking-[0.18em] text-muted-foreground">
+          Service
+          <select
+            value={service}
+            onChange={(e) => setService(e.target.value)}
+            className="mt-3 w-full border border-border bg-transparent px-4 py-3 text-sm normal-case tracking-normal text-foreground outline-none focus:border-gold"
+          >
+            {reviewFilters.slice(1).map((f) => (
+              <option key={f} value={f}>
+                {f}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="text-[0.64rem] uppercase tracking-[0.18em] text-muted-foreground">
+          Rating
+          <select
+            value={rating}
+            onChange={(e) => setRating(e.target.value)}
+            className="mt-3 w-full border border-border bg-transparent px-4 py-3 text-sm normal-case tracking-normal text-foreground outline-none focus:border-gold"
+          >
+            {["5", "4", "3", "2", "1"].map((r) => (
+              <option key={r} value={r}>
+                {r} out of 5
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="md:col-span-2 text-[0.64rem] uppercase tracking-[0.18em] text-muted-foreground">
+          Your review
+          <textarea
+            required
+            rows={6}
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            className="mt-3 w-full border border-border bg-transparent px-4 py-3 text-sm normal-case tracking-normal text-foreground outline-none focus:border-gold"
+          />
+        </label>
+        <button
+          type="submit"
+          className="md:col-span-2 justify-self-start bg-navy px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-cream transition-colors hover:bg-navy-deep"
+        >
+          Send review
+        </button>
+      </form>
     </div>
   );
 }
