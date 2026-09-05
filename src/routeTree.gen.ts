@@ -13,6 +13,8 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ClientLoginRouteImport } from './routes/client-login'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FindYourBookRouteImport } from './routes/find-your-book'
+import { Route as OurTeamRouteImport } from './routes/our-team'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ReviewsRouteImport } from './routes/reviews'
@@ -39,6 +41,16 @@ const ClientLoginRoute = ClientLoginRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FindYourBookRoute = FindYourBookRouteImport.update({
+  id: '/find-your-book',
+  path: '/find-your-book',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurTeamRoute = OurTeamRouteImport.update({
+  id: '/our-team',
+  path: '/our-team',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PortfolioRoute = PortfolioRouteImport.update({
@@ -82,6 +94,8 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/client-login': typeof ClientLoginRoute
   '/contact': typeof ContactRoute
+  '/find-your-book': typeof FindYourBookRoute
+  '/our-team': typeof OurTeamRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
@@ -95,6 +109,8 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/client-login': typeof ClientLoginRoute
   '/contact': typeof ContactRoute
+  '/find-your-book': typeof FindYourBookRoute
+  '/our-team': typeof OurTeamRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
@@ -109,6 +125,8 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/client-login': typeof ClientLoginRoute
   '/contact': typeof ContactRoute
+  '/find-your-book': typeof FindYourBookRoute
+  '/our-team': typeof OurTeamRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
@@ -124,6 +142,8 @@ export interface FileRouteTypes {
     | '/about'
     | '/client-login'
     | '/contact'
+    | '/find-your-book'
+    | '/our-team'
     | '/portfolio'
     | '/pricing'
     | '/reviews'
@@ -137,6 +157,8 @@ export interface FileRouteTypes {
     | '/about'
     | '/client-login'
     | '/contact'
+    | '/find-your-book'
+    | '/our-team'
     | '/portfolio'
     | '/pricing'
     | '/reviews'
@@ -150,6 +172,8 @@ export interface FileRouteTypes {
     | '/about'
     | '/client-login'
     | '/contact'
+    | '/find-your-book'
+    | '/our-team'
     | '/portfolio'
     | '/pricing'
     | '/reviews'
@@ -164,6 +188,8 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ClientLoginRoute: typeof ClientLoginRoute
   ContactRoute: typeof ContactRoute
+  FindYourBookRoute: typeof FindYourBookRoute
+  OurTeamRoute: typeof OurTeamRoute
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
   ReviewsRoute: typeof ReviewsRoute
@@ -200,6 +226,20 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/find-your-book': {
+      id: '/find-your-book'
+      path: '/find-your-book'
+      fullPath: '/find-your-book'
+      preLoaderRoute: typeof FindYourBookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-team': {
+      id: '/our-team'
+      path: '/our-team'
+      fullPath: '/our-team'
+      preLoaderRoute: typeof OurTeamRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/portfolio': {
@@ -271,6 +311,8 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ClientLoginRoute: ClientLoginRoute,
   ContactRoute: ContactRoute,
+  FindYourBookRoute: FindYourBookRoute,
+  OurTeamRoute: OurTeamRoute,
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
   ReviewsRoute: ReviewsRoute,

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { portfolio } from "@/components/site/showcase";
+import { portfolio, videoReviews } from "@/components/site/showcase";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -43,8 +43,35 @@ function Portfolio() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-6 pt-24 lg:px-10">
+        <p className="eyebrow">Filmed by authors</p>
+        <h2 className="mt-5 text-4xl sm:text-5xl">
+          Authors on <span className="italic text-gold">the finished work.</span>
+        </h2>
+        <div className="mt-14 grid gap-10 md:grid-cols-2">
+          {videoReviews.map((v) => (
+            <figure key={v.slug}>
+              <video
+                src={v.video}
+                controls
+                preload="metadata"
+                playsInline
+                className="aspect-video w-full bg-navy-deep object-cover"
+              />
+              <figcaption className="mt-5">
+                <p className="text-xl">{v.name}</p>
+                <p className="mt-1 text-[0.64rem] uppercase tracking-[0.18em] text-muted-foreground">
+                  {v.detail}
+                </p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
         <div className="space-y-24">
+
           {portfolio.map((p, i) => (
             <article
               key={p.slug}
