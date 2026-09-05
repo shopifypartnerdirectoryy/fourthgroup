@@ -35,10 +35,21 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/find-your-book" className="hover:text-gold">
+                  Find Your Book
+                </Link>
+              </li>
+              <li>
                 <Link to="/portfolio" className="hover:text-gold">
                   Portfolio
                 </Link>
               </li>
+              <li>
+                <Link to="/our-team" className="hover:text-gold">
+                  Our Team
+                </Link>
+              </li>
+
               <li>
                 <Link to="/success-stories" className="hover:text-gold">
                   Success Stories
