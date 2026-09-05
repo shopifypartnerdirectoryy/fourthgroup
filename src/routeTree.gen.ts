@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ClientLoginRouteImport } from './routes/client-login'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FindYourBookRouteImport } from './routes/find-your-book'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ReviewsRouteImport } from './routes/reviews'
@@ -39,6 +40,11 @@ const ClientLoginRoute = ClientLoginRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FindYourBookRoute = FindYourBookRouteImport.update({
+  id: '/find-your-book',
+  path: '/find-your-book',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PortfolioRoute = PortfolioRouteImport.update({
@@ -82,6 +88,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/client-login': typeof ClientLoginRoute
   '/contact': typeof ContactRoute
+  '/find-your-book': typeof FindYourBookRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
@@ -95,6 +102,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/client-login': typeof ClientLoginRoute
   '/contact': typeof ContactRoute
+  '/find-your-book': typeof FindYourBookRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
@@ -109,6 +117,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/client-login': typeof ClientLoginRoute
   '/contact': typeof ContactRoute
+  '/find-your-book': typeof FindYourBookRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
@@ -124,6 +133,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/client-login'
     | '/contact'
+    | '/find-your-book'
     | '/portfolio'
     | '/pricing'
     | '/reviews'
@@ -137,6 +147,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/client-login'
     | '/contact'
+    | '/find-your-book'
     | '/portfolio'
     | '/pricing'
     | '/reviews'
@@ -150,6 +161,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/client-login'
     | '/contact'
+    | '/find-your-book'
     | '/portfolio'
     | '/pricing'
     | '/reviews'
@@ -164,6 +176,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ClientLoginRoute: typeof ClientLoginRoute
   ContactRoute: typeof ContactRoute
+  FindYourBookRoute: typeof FindYourBookRoute
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
   ReviewsRoute: typeof ReviewsRoute
@@ -200,6 +213,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/find-your-book': {
+      id: '/find-your-book'
+      path: '/find-your-book'
+      fullPath: '/find-your-book'
+      preLoaderRoute: typeof FindYourBookRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/portfolio': {
@@ -271,6 +291,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ClientLoginRoute: ClientLoginRoute,
   ContactRoute: ContactRoute,
+  FindYourBookRoute: FindYourBookRoute,
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
   ReviewsRoute: ReviewsRoute,
