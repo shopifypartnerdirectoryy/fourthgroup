@@ -2,6 +2,8 @@ import reel1 from "@/assets/reel-1.jpg.asset.json";
 import reel2 from "@/assets/reel-2.jpg.asset.json";
 import reel3 from "@/assets/reel-3.jpg.asset.json";
 import reel4 from "@/assets/reel-4.jpg.asset.json";
+import review1 from "@/assets/review-1.mp4.asset.json";
+import review2 from "@/assets/review-2.mp4.asset.json";
 
 /**
  * Illustrative studio content for Fourth Group & Co.
@@ -267,14 +269,14 @@ export const videoReviews = [
     slug: "geoffrey-arnold",
     name: "Geoffrey Arnold",
     detail: "Historical fiction · Listopia campaign & trailer",
-    video: "/__l5e/assets-v1/8d935713-4cc7-4953-90ff-c4f37273d84e/review-geoffrey-arnold.mp4",
+    video: review1.url,
     text: "Geoffrey talks through what changed once the book had a film and a place on the right reader lists.",
   },
   {
     slug: "steve-young",
     name: "Steve Young",
     detail: "Non-fiction · Listing rebuild & author site",
-    video: "/__l5e/assets-v1/add73a80-a4a2-429d-b33e-47fb3841f163/review-steve-young.mp4",
+    video: review2.url,
     text: "Steve on rebuilding a tired listing, and what a proper author platform did for the next launch.",
   },
 ];

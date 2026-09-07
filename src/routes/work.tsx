@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { reel } from "@/components/site/reel";
 
 
 export const Route = createFileRoute("/work")({
@@ -67,33 +66,11 @@ function Work() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
-        <p className="eyebrow">The reel</p>
+        <p className="eyebrow">Our work</p>
         <h2 className="mt-5 text-4xl sm:text-5xl">
-          Films by <span className="italic text-gold">genre.</span>
+          Work shaped around <span className="italic text-gold">each book.</span>
         </h2>
-        <div className="mt-14 grid gap-10 md:grid-cols-2">
-          {reel.map((r) => (
-            <article key={r.title}>
-              <div className="relative overflow-hidden bg-secondary">
-                <img
-                  src={r.image}
-                  alt={r.alt}
-                  width={1280}
-                  height={720}
-                  loading="lazy"
-                  className="aspect-video w-full object-cover transition-transform duration-700 hover:scale-[1.04]"
-                />
-                <span className="absolute bottom-4 right-4 bg-navy-deep/80 px-3 py-1 text-[0.66rem] tracking-[0.18em] text-cream/80">
-                  {r.length}
-                </span>
-              </div>
-              <h3 className="mt-5 text-2xl">{r.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{r.text}</p>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-24 grid gap-px bg-border sm:grid-cols-2">
+        <div className="mt-14 grid gap-px bg-border sm:grid-cols-2">
           {disciplines.map((d) => (
             <article key={d.title} className="bg-background p-10">
               <p className="text-[0.66rem] uppercase tracking-[0.22em] text-gold">{d.meta}</p>

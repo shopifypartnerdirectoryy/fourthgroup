@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { portfolio, videoReviews } from "@/components/site/showcase";
+import { videoReviews } from "@/components/site/showcase";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -44,7 +44,7 @@ function Portfolio() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pt-24 lg:px-10">
-        <p className="eyebrow">Filmed by authors</p>
+          <p className="eyebrow">Video reviews</p>
         <h2 className="mt-5 text-4xl sm:text-5xl">
           Authors on <span className="italic text-gold">the finished work.</span>
         </h2>
@@ -56,6 +56,7 @@ function Portfolio() {
                 controls
                 preload="metadata"
                 playsInline
+                aria-label={`${v.name} video review`}
                 className="aspect-video w-full bg-navy-deep object-cover"
               />
               <figcaption className="mt-5">
@@ -70,55 +71,6 @@ function Portfolio() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
-        <div className="space-y-24">
-
-          {portfolio.map((p, i) => (
-            <article
-              key={p.slug}
-              className={`grid items-center gap-12 md:grid-cols-2 ${i % 2 ? "md:[&>figure]:order-2" : ""}`}
-            >
-              <figure className="relative overflow-hidden bg-secondary">
-                <img
-                  src={p.image}
-                  alt={p.alt}
-                  width={1280}
-                  height={720}
-                  loading="lazy"
-                  className="aspect-video w-full object-cover transition-transform duration-700 hover:scale-[1.04]"
-                />
-                <figcaption className="absolute bottom-4 right-4 bg-navy-deep/80 px-3 py-1 text-[0.66rem] tracking-[0.18em] text-cream/80">
-                  Book trailer · {p.length}
-                </figcaption>
-              </figure>
-
-              <div>
-                <p className="text-[0.66rem] uppercase tracking-[0.22em] text-gold">
-                  {p.n} · {p.category}
-                </p>
-                <h2 className="mt-5 text-3xl leading-tight sm:text-4xl">{p.title}</h2>
-                <p className="mt-2 text-sm text-muted-foreground">{p.author}</p>
-                <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
-                <ul className="mt-6 flex flex-wrap gap-2">
-                  {p.disciplines.map((d) => (
-                    <li
-                      key={d}
-                      className="border border-border px-3 py-1 text-[0.64rem] uppercase tracking-[0.18em] text-foreground/70"
-                    >
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to="/contact"
-                  className="mt-8 inline-block text-[0.7rem] uppercase tracking-[0.22em] text-navy hover:text-gold"
-                >
-                  Request the full film →
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-
         <div className="mt-24 border-t border-border pt-16 text-center">
           <h2 className="text-3xl sm:text-4xl">
             Want the reel <span className="italic text-gold">for your genre?</span>

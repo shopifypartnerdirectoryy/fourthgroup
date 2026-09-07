@@ -3,7 +3,6 @@ import { ArrowRight } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { services, team, process, reasons, faqs } from "@/components/site/data";
-import { reel } from "@/components/site/reel";
 import heroAsset from "@/assets/hero-library.jpg.asset.json";
 
 
@@ -150,50 +149,6 @@ function Home() {
               </div>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="surface-navy border-y border-gold/15">
-        <div className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <p className="eyebrow">The reel</p>
-              <h2 className="mt-5 max-w-2xl text-4xl leading-tight text-cream sm:text-5xl">
-                Trailers made <span className="italic text-gold">like short films.</span>
-              </h2>
-            </div>
-            <Link
-              to="/portfolio"
-              className="text-[0.72rem] uppercase tracking-[0.22em] text-gold hover:text-gold-soft"
-            >
-              View full portfolio →
-            </Link>
-          </div>
-
-          <div className="mt-16 grid gap-10 md:grid-cols-2">
-            {reel.map((r) => (
-              <article key={r.title} className="group">
-                <div className="relative overflow-hidden">
-                  <img
-                    src={r.image}
-                    alt={r.alt}
-                    width={1280}
-                    height={720}
-                    loading="lazy"
-                    className="aspect-video w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                  />
-                  <span className="absolute bottom-4 right-4 bg-navy-deep/80 px-3 py-1 text-[0.66rem] tracking-[0.18em] text-cream/80">
-                    {r.length}
-                  </span>
-                </div>
-                <p className="mt-5 text-[0.66rem] uppercase tracking-[0.22em] text-gold">
-                  {r.genre}
-                </p>
-                <h3 className="mt-3 text-2xl text-cream">{r.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-cream/60">{r.text}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
