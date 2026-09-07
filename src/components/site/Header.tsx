@@ -47,12 +47,12 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-5 lg:flex xl:gap-7">
+        <nav className="hidden items-center gap-3 lg:flex xl:gap-4">
           {nav.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="text-[0.66rem] uppercase tracking-[0.18em] text-cream/75 transition-colors hover:text-gold"
+              className="whitespace-nowrap text-[0.6rem] uppercase tracking-[0.12em] text-cream/75 transition-colors hover:text-gold xl:text-[0.66rem] xl:tracking-[0.16em]"
               activeProps={{ className: "text-gold" }}
             >
               {item.label}
@@ -60,14 +60,14 @@ export function Header() {
           ))}
           <Link
             to="/client-login"
-            className="text-[0.66rem] uppercase tracking-[0.18em] text-cream/50 transition-colors hover:text-gold"
+            className="whitespace-nowrap text-[0.6rem] uppercase tracking-[0.12em] text-cream/50 transition-colors hover:text-gold xl:text-[0.66rem] xl:tracking-[0.16em]"
             activeProps={{ className: "text-gold" }}
           >
             Client Login
           </Link>
           <Link
             to="/contact"
-            className="border border-gold/60 px-4 py-2.5 text-[0.66rem] uppercase tracking-[0.18em] text-gold transition-colors hover:bg-gold hover:text-navy-deep"
+            className="whitespace-nowrap border border-gold/60 px-3 py-2 text-[0.6rem] uppercase tracking-[0.12em] text-gold transition-colors hover:bg-gold hover:text-navy-deep xl:px-4 xl:py-2.5 xl:text-[0.66rem] xl:tracking-[0.16em]"
           >
             Start a project
           </Link>
