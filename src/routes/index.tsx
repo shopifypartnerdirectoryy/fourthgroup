@@ -36,7 +36,7 @@ function Home() {
 
       <section className="relative flex min-h-[100svh] items-center overflow-hidden">
         <img
-          src={hero}
+          src={heroAsset.url}
           alt="A lamplit private library at dusk with an open book on a polished desk"
           width={1920}
           height={1280}
