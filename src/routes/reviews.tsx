@@ -60,6 +60,7 @@ function Reviews() {
                 controls
                 preload="metadata"
                 playsInline
+                aria-label={`${v.name} video review`}
                 className="aspect-video w-full bg-navy-deep object-cover"
               />
               <figcaption className="mt-6">
