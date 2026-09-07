@@ -4,7 +4,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { services, team, process, reasons, faqs } from "@/components/site/data";
 import { reel } from "@/components/site/reel";
-import hero from "@/assets/hero-library.jpg";
+import heroAsset from "@/assets/hero-library.jpg.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -36,7 +36,7 @@ function Home() {
 
       <section className="relative flex min-h-[100svh] items-center overflow-hidden">
         <img
-          src={hero}
+          src={heroAsset.url}
           alt="A lamplit private library at dusk with an open book on a polished desk"
           width={1920}
           height={1280}

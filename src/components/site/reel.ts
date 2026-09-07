@@ -1,11 +1,11 @@
-import reel1 from "@/assets/reel-1.jpg";
-import reel2 from "@/assets/reel-2.jpg";
-import reel3 from "@/assets/reel-3.jpg";
-import reel4 from "@/assets/reel-4.jpg";
+import reel1 from "@/assets/reel-1.jpg.asset.json";
+import reel2 from "@/assets/reel-2.jpg.asset.json";
+import reel3 from "@/assets/reel-3.jpg.asset.json";
+import reel4 from "@/assets/reel-4.jpg.asset.json";
 
 export const reel = [
   {
-    image: reel1,
+    image: reel1.url,
     alt: "Film still of a rain-slicked city street at night lit by warm lamps",
     title: "Crime and thriller",
     genre: "Trailer craft",
@@ -13,7 +13,7 @@ export const reel = [
     length: "1:50",
   },
   {
-    image: reel2,
+    image: reel2.url,
     alt: "Film still of a lone figure walking through tall grass at dusk",
     title: "Literary and memoir",
     genre: "Trailer craft",
@@ -21,7 +21,7 @@ export const reel = [
     length: "1:35",
   },
   {
-    image: reel3,
+    image: reel3.url,
     alt: "Film still of an open manuscript on a desk under a brass lamp",
     title: "Non-fiction and ideas",
     genre: "Trailer craft",
@@ -29,7 +29,7 @@ export const reel = [
     length: "2:00",
   },
   {
-    image: reel4,
+    image: reel4.url,
     alt: "Film still of stormy sea cliffs at blue hour",
     title: "Fantasy and speculative",
     genre: "Trailer craft",
