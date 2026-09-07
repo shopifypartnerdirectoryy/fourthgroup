@@ -4,7 +4,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { services, team, process, reasons, faqs } from "@/components/site/data";
 import { reel } from "@/components/site/reel";
-import hero from "@/assets/hero-library.jpg";
+import heroAsset from "@/assets/hero-library.jpg.asset.json";
 
 
 export const Route = createFileRoute("/")({
