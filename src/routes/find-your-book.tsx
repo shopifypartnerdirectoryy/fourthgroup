@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { books, bookGenres } from "@/components/site/showcase";
+import { catalogueBooks, catalogueGenres } from "@/components/site/catalogue";
 
 export const Route = createFileRoute("/find-your-book")({
   head: () => ({
@@ -26,13 +26,16 @@ export const Route = createFileRoute("/find-your-book")({
 });
 
 function FindYourBook() {
-  const [genre, setGenre] = useState(bookGenres[0]!);
+  const [genre, setGenre] = useState(catalogueGenres[0] ?? "All books");
   const [query, setQuery] = useState("");
 
-  const shown = books.filter((b) => {
-    const byGenre = genre === bookGenres[0] || b.genre === genre;
+  const shown = catalogueBooks.filter((book) => {
+    const byGenre = genre === catalogueGenres[0] || book.genre === genre;
     const q = query.trim().toLowerCase();
-    const bySearch = !q || b.title.toLowerCase().includes(q) || b.blurb.toLowerCase().includes(q);
+    const bySearch =
+      !q ||
+      book.title.toLowerCase().includes(q) ||
+      book.author.toLowerCase().includes(q);
     return byGenre && bySearch;
   });
 
@@ -48,8 +51,8 @@ function FindYourBook() {
           </h1>
           <div className="rule-gold mt-8 w-40" />
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-cream/70">
-            Every title here came through the studio, which means somebody read it cover to cover
-            before it was ever marketed. Pick a genre, or search for a mood.
+            Browse 93 public book listings curated by Aspire Edge. These titles are shown for reader
+            discovery and are not presented as Fourth Group clients.
           </p>
         </div>
       </section>
@@ -57,7 +60,7 @@ function FindYourBook() {
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-wrap gap-3">
-            {bookGenres.map((g) => (
+            {catalogueGenres.map((g) => (
               <button
                 key={g}
                 type="button"
@@ -83,32 +86,26 @@ function FindYourBook() {
         </div>
 
         <div className="mt-14 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {shown.map((b) => (
-            <article key={b.slug} className="flex flex-col bg-background">
-              <img
-                src={b.image}
-                alt={`${b.title} — cover artwork`}
-                width={1280}
-                height={720}
-                loading="lazy"
-                className="aspect-[3/2] w-full object-cover"
-              />
+          {shown.map((book) => (
+            <article key={book.id} className="flex flex-col bg-background">
+              <div className="surface-navy flex aspect-[3/2] items-center justify-center border-b border-gold/20 p-8 text-center">
+                <div>
+                  <p className="text-[0.6rem] uppercase tracking-[0.2em] text-gold">Book discovery</p>
+                  <p className="mt-4 font-display text-2xl leading-tight text-cream">{book.title}</p>
+                </div>
+              </div>
               <div className="flex flex-1 flex-col p-8">
-                <p className="text-[0.62rem] uppercase tracking-[0.2em] text-gold">{b.genre}</p>
-                <h2 className="mt-4 text-2xl leading-tight">{b.title}</h2>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">
-                  {b.blurb}
-                </p>
-                <ul className="mt-6 flex flex-wrap gap-2 border-t border-border pt-5">
-                  {b.work.map((w) => (
-                    <li
-                      key={w}
-                      className="border border-border px-3 py-1 text-[0.6rem] uppercase tracking-[0.18em] text-foreground/70"
-                    >
-                      {w}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-[0.62rem] uppercase tracking-[0.2em] text-gold">{book.genre}</p>
+                <h2 className="mt-4 text-2xl leading-tight">{book.title}</h2>
+                <p className="mt-2 flex-1 text-sm text-muted-foreground">by {book.author}</p>
+                <a
+                  href={book.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 border-t border-border pt-5 text-[0.66rem] uppercase tracking-[0.18em] text-navy hover:text-gold"
+                >
+                  View at Aspire Edge →
+                </a>
               </div>
             </article>
           ))}
@@ -129,18 +126,17 @@ function FindYourBook() {
               Want your book <span className="italic text-gold">in this library?</span>
             </h2>
             <p className="mt-8 text-base leading-relaxed text-cream/70">
-              We take four titles a quarter. Send the manuscript or a generous sample with the
-              genre, the reader you wrote it for and your launch window. You will hear back from a
-              person who has read it, in under an hour.
+              Tell us about your book and the readers you want to reach. Include the title, genre,
+              a short description and any website or social link; our team replies in under an hour.
             </p>
           </div>
           <div className="border border-gold/30 p-10">
             <ul className="space-y-5 text-sm text-cream/75">
               {[
-                "Manuscript or sample chapters, any format",
-                "Title, genre and comparable books",
-                "Publication date or launch window",
-                "What you have already tried, honestly",
+                "Author name, email and book title",
+                "Genre and a short book description",
+                "Website or social link, if available",
+                "The promotion service you are interested in",
               ].map((t) => (
                 <li key={t} className="flex gap-4 border-b border-cream/10 pb-5">
                   <span className="mt-2 h-px w-6 shrink-0 bg-gold" />

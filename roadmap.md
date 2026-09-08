@@ -1,0 +1,6 @@
+- [ ] Diagnose and fix images not rendering in the live browser
+- [ ] Remove all still-image cards presented as videos
+- [ ] Add Aspire Edge public book catalogue with accurate attribution
+- [ ] Incorporate relevant public submission information from Aspire Edge
+- [ ] Widen primary site containers to a maximum of 1500px
+- [ ] Verify images, real videos, catalogue filters, and layout in browser
