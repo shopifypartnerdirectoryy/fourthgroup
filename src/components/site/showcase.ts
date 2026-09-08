@@ -2,8 +2,8 @@ import reel1 from "@/assets/reel-1.jpg.asset.json";
 import reel2 from "@/assets/reel-2.jpg.asset.json";
 import reel3 from "@/assets/reel-3.jpg.asset.json";
 import reel4 from "@/assets/reel-4.jpg.asset.json";
-import review1 from "@/assets/review-1.mp4.asset.json";
-import review2 from "@/assets/review-2.mp4.asset.json";
+import review1 from "@/assets/review-geoffrey-web.mp4.asset.json";
+import review2 from "@/assets/review-steve-web.mp4.asset.json";
 
 /**
  * Illustrative studio content for Fourth Group & Co.
