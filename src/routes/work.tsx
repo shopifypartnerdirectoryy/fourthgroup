@@ -18,6 +18,7 @@ export const Route = createFileRoute("/work")({
         content: "Selected campaigns, films and author websites from Fourth Group & Co.",
       },
     ],
+      links: [{ rel: "canonical", href: "https://fourthgroup.co/work" }],
   }),
   component: Work,
 });
