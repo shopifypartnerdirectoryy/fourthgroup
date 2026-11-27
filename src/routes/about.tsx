@@ -35,9 +35,7 @@ function About() {
           </h1>
           <div className="rule-gold mt-8 w-40" />
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-cream/70">
-            Fourth Group &amp; Co exists because most books are marketed by people who never read
-            them. We work the other way round: the manuscript first, the campaign second, and only
-            as many titles as we can genuinely carry.
+            Fourth Group &amp; Co brings book promotion, publicity and author marketing together under one roof. We begin by understanding the book, the readers it is intended to reach and the outcome the author wants to pursue.
           </p>
         </div>
       </section>
@@ -100,9 +98,7 @@ function About() {
             <p className="eyebrow">Submit your manuscript</p>
             <h3 className="mt-5 text-2xl">Send the book, not a brief.</h3>
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-              Email the manuscript or a sample with your title, genre and launch date. We read
-              everything ourselves, reply in under an hour, and come back with an honest view of
-              what we would do — whether or not you hire us.
+              Send your title, genre, publishing stage and launch date. We will review the information you provide and discuss an appropriate next step.
             </p>
             <a
               href="mailto:info@fourthgroupco.com?subject=Manuscript%20submission"
@@ -111,7 +107,7 @@ function About() {
               Email your manuscript
             </a>
             <p className="mt-5 text-center text-[0.64rem] uppercase tracking-[0.18em] text-muted-foreground">
-              Four titles taken each quarter
+              Projects accepted by scope and availability
             </p>
           </div>
         </div>
