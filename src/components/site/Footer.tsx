@@ -102,6 +102,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-cream/10 pt-6 text-xs tracking-wider text-cream/45 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap gap-5"><Link to="/privacy" className="hover:text-gold">Privacy</Link><Link to="/terms" className="hover:text-gold">Terms</Link></div>
           <p>© {new Date().getFullYear()} Fourth Group &amp; Co. All rights reserved.</p>
           <p className="uppercase tracking-[0.22em]">Manuscript to market</p>
         </div>
