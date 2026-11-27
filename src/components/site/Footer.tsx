@@ -4,6 +4,15 @@ import logo from "@/assets/logo.png.asset.json";
 export function Footer() {
   return (
     <footer className="surface-navy border-t border-gold/20">
+      <section className="border-b border-gold/20">
+        <div className="mx-auto flex max-w-7xl flex-col gap-7 px-6 py-16 lg:flex-row lg:items-center lg:justify-between lg:px-10">
+          <div>
+            <p className="eyebrow">Your next chapter</p>
+            <h2 className="mt-4 max-w-2xl font-display text-3xl text-cream sm:text-4xl">Your story deserves <span className="italic text-gold">a wider audience.</span></h2>
+          </div>
+          <Link to="/contact" className="inline-flex shrink-0 items-center justify-center bg-gold px-8 py-4 text-[0.68rem] uppercase tracking-[0.18em] text-navy-deep hover:bg-gold-soft">Request a Campaign Proposal</Link>
+        </div>
+      </section>
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
