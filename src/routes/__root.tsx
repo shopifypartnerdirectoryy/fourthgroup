@@ -81,9 +81,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Fourth Group & Co is an author marketing studio: Listopia campaigns, cinematic book trailers, author websites and Amazon SEO.",
+          "Fourth Group & Co is a book promotion, publicity and author marketing agency offering reader campaigns, social promotion, creative production and author platform services.",
       },
       { name: "author", content: "Fourth Group & Co" },
+      { name: "theme-color", content: "#101b2b" },
+      { property: "og:site_name", content: "Fourth Group & Co" },
       { property: "og:title", content: "Fourth Group & Co | Author Marketing Studio" },
       {
         property: "og:description",
