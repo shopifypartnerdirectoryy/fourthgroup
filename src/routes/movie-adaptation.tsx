@@ -8,13 +8,14 @@ export const Route = createFileRoute("/movie-adaptation")({
     { name: "description", content: "Book-to-screen packaging and adaptation potential assessment for authors exploring film and television pathways." },
     { property: "og:title", content: "Screen Adaptation | Fourth Group & Co" },
     { property: "og:description", content: "Explore story assessment, character development and submission readiness." },
-  ] }),
+  ],
+    links: [{ rel: "canonical", href: "https://fourthgroup.co/movie-adaptation" }],
+  }),
   component: MovieAdaptation,
 });
 
 const stages = [
   ["Story assessment", "Review the premise, themes, narrative arc and the elements that could translate to a screen format."],
-      links: [{ rel: "canonical", href: "https://fourthgroup.co/movie-adaptation" }],
   ["Character development", "Consider principal characters, relationships, motivations and the dramatic engine of the story."],
   ["Submission readiness", "Discuss rights position, project readiness and the information required before any professional submission."],
   ["Representation pathway", "Where genuine industry relationships and a suitable written mandate exist, representation or producer submissions may be discussed as a separate service."],
