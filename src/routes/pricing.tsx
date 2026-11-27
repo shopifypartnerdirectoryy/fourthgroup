@@ -11,7 +11,9 @@ export const Route = createFileRoute("/pricing")({
     { property: "og:title", content: "Launch Packages & Pricing | Fourth Group & Co" },
     { property: "og:description", content: "Three coordinated launch packages and transparent à la carte service pricing." },
     { property: "og:type", content: "website" },
-  ] }),
+  ],
+    links: [{ rel: "canonical", href: "https://fourthgroup.co/pricing" }],
+  }),
   component: Pricing,
 });
 
