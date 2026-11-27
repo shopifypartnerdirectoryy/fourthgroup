@@ -12,6 +12,11 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ClientLoginRouteImport } from './routes/client-login'
+import { Route as ClientCampaignsRouteImport } from './routes/client-campaigns'
+import { Route as AudiobookProductionRouteImport } from './routes/audiobook-production'
+import { Route as MovieAdaptationRouteImport } from './routes/movie-adaptation'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FindYourBookRouteImport } from './routes/find-your-book'
 import { Route as OurTeamRouteImport } from './routes/our-team'
@@ -37,6 +42,21 @@ const ClientLoginRoute = ClientLoginRouteImport.update({
   id: '/client-login',
   path: '/client-login',
   getParentRoute: () => rootRouteImport,
+} as any)
+const ClientCampaignsRoute = ClientCampaignsRouteImport.update({
+  id: '/client-campaigns', path: '/client-campaigns', getParentRoute: () => rootRouteImport,
+} as any)
+const AudiobookProductionRoute = AudiobookProductionRouteImport.update({
+  id: '/audiobook-production', path: '/audiobook-production', getParentRoute: () => rootRouteImport,
+} as any)
+const MovieAdaptationRoute = MovieAdaptationRouteImport.update({
+  id: '/movie-adaptation', path: '/movie-adaptation', getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy', path: '/privacy', getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms', path: '/terms', getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
@@ -90,6 +110,11 @@ const ServicesSlugRoute = ServicesSlugRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
+  '/audiobook-production': typeof AudiobookProductionRoute
+  '/client-campaigns': typeof ClientCampaignsRoute
+  '/movie-adaptation': typeof MovieAdaptationRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/client-login': typeof ClientLoginRoute
@@ -105,6 +130,11 @@ export interface FileRoutesByFullPath {
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesByTo {
+  '/audiobook-production': typeof AudiobookProductionRoute
+  '/client-campaigns': typeof ClientCampaignsRoute
+  '/movie-adaptation': typeof MovieAdaptationRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/client-login': typeof ClientLoginRoute
@@ -120,6 +150,11 @@ export interface FileRoutesByTo {
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesById {
+  '/audiobook-production': typeof AudiobookProductionRoute
+  '/client-campaigns': typeof ClientCampaignsRoute
+  '/movie-adaptation': typeof MovieAdaptationRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
@@ -138,6 +173,11 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
+    | '/audiobook-production'
+    | '/client-campaigns'
+    | '/movie-adaptation'
+    | '/privacy'
+    | '/terms'
     | '/'
     | '/about'
     | '/client-login'
@@ -153,6 +193,11 @@ export interface FileRouteTypes {
     | '/services/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
+    | '/audiobook-production'
+    | '/client-campaigns'
+    | '/movie-adaptation'
+    | '/privacy'
+    | '/terms'
     | '/'
     | '/about'
     | '/client-login'
@@ -167,6 +212,11 @@ export interface FileRouteTypes {
     | '/work'
     | '/services/$slug'
   id:
+    | '/audiobook-production'
+    | '/client-campaigns'
+    | '/movie-adaptation'
+    | '/privacy'
+    | '/terms'
     | '__root__'
     | '/'
     | '/about'
@@ -184,6 +234,11 @@ export interface FileRouteTypes {
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  ClientCampaignsRoute: typeof ClientCampaignsRoute
+  AudiobookProductionRoute: typeof AudiobookProductionRoute
+  MovieAdaptationRoute: typeof MovieAdaptationRoute
+  PrivacyRoute: typeof PrivacyRoute
+  TermsRoute: typeof TermsRoute
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ClientLoginRoute: typeof ClientLoginRoute
@@ -200,6 +255,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/client-campaigns': { id: '/client-campaigns'; path: '/client-campaigns'; fullPath: '/client-campaigns'; preLoaderRoute: typeof ClientCampaignsRouteImport; parentRoute: typeof rootRouteImport }
+    '/audiobook-production': { id: '/audiobook-production'; path: '/audiobook-production'; fullPath: '/audiobook-production'; preLoaderRoute: typeof AudiobookProductionRouteImport; parentRoute: typeof rootRouteImport }
+    '/movie-adaptation': { id: '/movie-adaptation'; path: '/movie-adaptation'; fullPath: '/movie-adaptation'; preLoaderRoute: typeof MovieAdaptationRouteImport; parentRoute: typeof rootRouteImport }
+    '/privacy': { id: '/privacy'; path: '/privacy'; fullPath: '/privacy'; preLoaderRoute: typeof PrivacyRouteImport; parentRoute: typeof rootRouteImport }
+    '/terms': { id: '/terms'; path: '/terms'; fullPath: '/terms'; preLoaderRoute: typeof TermsRouteImport; parentRoute: typeof rootRouteImport }
     '/': {
       id: '/'
       path: '/'
@@ -307,6 +367,11 @@ const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
 )
 
 const rootRouteChildren: RootRouteChildren = {
+  ClientCampaignsRoute,
+  AudiobookProductionRoute,
+  MovieAdaptationRoute,
+  PrivacyRoute,
+  TermsRoute,
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ClientLoginRoute: ClientLoginRoute,

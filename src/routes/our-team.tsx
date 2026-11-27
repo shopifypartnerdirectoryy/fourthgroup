@@ -10,16 +10,17 @@ export const Route = createFileRoute("/our-team")({
       {
         name: "description",
         content:
-          "Meet the people at Fourth Group & Co who read your book before they market it — strategy, film and author platform, all in-house.",
+          "Meet Matthew Collins, Malik Bok and Bawa Fawaz, the leadership team behind Fourth Group & Co.",
       },
       { property: "og:title", content: "Our Team | Fourth Group & Co" },
       {
         property: "og:description",
-        content: "The people who read your book before they market it.",
+        content: "The leadership team behind Fourth Group & Co.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+      links: [{ rel: "canonical", href: "https://fourthgroup.co/our-team" }],
   }),
   component: OurTeam,
 });
@@ -33,12 +34,11 @@ function OurTeam() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <p className="eyebrow">The studio</p>
           <h1 className="mt-5 max-w-3xl text-5xl leading-[1.05] text-cream sm:text-6xl">
-            Three people, <span className="italic text-gold">four books a quarter.</span>
+            The people behind <span className="italic text-gold">the work.</span>
           </h1>
           <div className="rule-gold mt-8 w-40" />
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-cream/70">
-            No account managers, no outsourced edit suite. The people below are the people who read
-            the manuscript, write the plan and answer your email.
+            Meet the leadership team guiding Fourth Group &amp; Co’s author campaigns, creative production and digital work.
           </p>
         </div>
       </section>
@@ -47,32 +47,19 @@ function OurTeam() {
         <div className="grid gap-14 md:grid-cols-3">
           {team.map((m) => (
             <article key={m.name}>
-              <img
-                src={m.image}
-                alt={m.name}
-                width={800}
-                height={1000}
-                loading="lazy"
-                className="aspect-[4/5] w-full bg-secondary object-cover object-top"
-              />
+              <div className="flex aspect-[4/5] items-end bg-navy p-8"><span className="font-display text-5xl text-gold">{m.name.split(" ").map((part) => part[0]).join("")}</span></div>
               <h2 className="mt-6 text-2xl">{m.name}</h2>
               <p className="mt-1 text-[0.68rem] uppercase tracking-[0.22em] text-gold">{m.role}</p>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{m.bio}</p>
-              <a
-                href={`mailto:${m.email}`}
-                className="mt-4 inline-block text-sm text-navy underline-offset-4 hover:text-gold hover:underline"
-              >
-                {m.email}
-              </a>
             </article>
           ))}
         </div>
 
         <div className="mt-24 grid gap-px border border-border bg-border sm:grid-cols-3">
           {[
-            { v: "Under 1 hr", l: "Average reply time" },
-            { v: "4 titles", l: "Taken each quarter" },
-            { v: "In-house", l: "Strategy, film and web" },
+            { v: "Book-led", l: "Strategy" },
+            { v: "Joined-up", l: "Campaigns" },
+            { v: "Clear", l: "Communication" },
           ].map((s) => (
             <div key={s.l} className="bg-background p-10">
               <p className="font-display text-3xl text-gold">{s.v}</p>

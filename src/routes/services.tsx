@@ -1,93 +1,51 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { services } from "@/components/site/data";
+import { services, servicePillars } from "@/components/site/data";
 
 export const Route = createFileRoute("/services")({
-  head: () => ({
-    meta: [
-      { title: "Services | Fourth Group & Co" },
-      {
-        name: "description",
-        content:
-          "Goodreads Listopia promotion, cinematic book trailers, author website design and Amazon SEO optimisation from Fourth Group & Co.",
-      },
-      { property: "og:title", content: "Services | Fourth Group & Co" },
-      {
-        property: "og:description",
-        content:
-          "Four author marketing disciplines: Listopia, trailers, author websites and Amazon SEO.",
-      },
-    ],
+  head: () => ({ meta: [
+    { title: "Book Marketing Services | Fourth Group & Co" },
+    { name: "description", content: "Reader outreach, social growth, creative production, audiobook services and author digital presence from Fourth Group & Co." },
+    { property: "og:title", content: "Book Marketing Services | Fourth Group & Co" },
+    { property: "og:description", content: "Explore the four service pillars and eleven core author marketing services." },
+  ],
+    links: [{ rel: "canonical", href: "https://fourthgroup.co/services" }],
   }),
   component: Services,
 });
 
 function Services() {
-  return (
-    <div className="min-h-screen bg-background">
-      <Header />
-
-      <section className="surface-navy pt-40 pb-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="eyebrow">Services</p>
-          <h1 className="mt-5 max-w-3xl text-5xl leading-[1.05] text-cream sm:text-6xl">
-            Everything a book needs <span className="italic text-gold">after the last edit.</span>
-          </h1>
-          <div className="rule-gold mt-8 w-40" />
-        </div>
-      </section>
-
+  return <div className="min-h-screen bg-background">
+    <Header />
+    <section className="surface-navy pt-40 pb-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        {services.map((s) => (
-          <section
-            key={s.slug}
-            className="grid gap-10 border-b border-border py-20 md:grid-cols-[auto_1fr_1fr] md:gap-16"
-          >
-            <span className="font-display text-4xl text-gold/70">{s.n}</span>
-            <div>
-              <h2 className="text-3xl leading-tight">{s.title}</h2>
-              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{s.blurb}</p>
-              <p className="mt-8 font-display text-2xl">{s.price}</p>
-              <p className="text-[0.66rem] uppercase tracking-[0.2em] text-muted-foreground">
-                {s.note}
-              </p>
-            </div>
-            <ul className="space-y-4 md:border-l md:border-border md:pl-12">
-              {s.points.map((p) => (
-                <li key={p} className="flex gap-3 text-sm text-foreground/80">
-                  <span className="mt-2 h-px w-4 shrink-0 bg-gold" />
-                  {p}
-                </li>
-              ))}
-              <li>
-                <Link
-                  to="/services/$slug"
-                  params={{ slug: s.slug }}
-                  className="mt-4 inline-block text-[0.7rem] uppercase tracking-[0.22em] text-navy hover:text-gold"
-                >
-                  Explore this service →
-                </Link>
-              </li>
-            </ul>
-          </section>
-        ))}
-
+        <p className="eyebrow">Marketing services</p>
+        <h1 className="mt-5 max-w-3xl text-5xl leading-[1.05] text-cream sm:text-6xl">Everything your book needs <span className="italic text-gold">to reach readers.</span></h1>
+        <div className="rule-gold mt-8 w-40" />
+        <p className="mt-8 max-w-2xl text-base leading-relaxed text-cream/70">Explore our four service pillars. Choose a single service or combine selected work into a coordinated campaign.</p>
       </div>
-
-      <section className="mx-auto max-w-3xl px-6 py-24 text-center">
-        <h2 className="text-3xl sm:text-4xl">
-          Not sure which one <span className="italic text-gold">your book needs?</span>
-        </h2>
-        <Link
-          to="/contact"
-          className="mt-8 inline-block bg-navy px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-cream transition-colors hover:bg-navy-deep"
-        >
-          Ask us
-        </Link>
-      </section>
-
-      <Footer />
+    </section>
+    <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+      {servicePillars.map((pillar,index) => <section key={pillar.title} className="border-b border-border py-14">
+        <div className="grid gap-8 md:grid-cols-[0.8fr_1.2fr]">
+          <div><p className="font-display text-3xl text-gold/70">0{index+1}</p><h2 className="mt-4 text-3xl">{pillar.title}</h2><p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">{pillar.description}</p></div>
+          <div className="grid gap-px bg-border sm:grid-cols-2">
+            {pillar.slugs.map(slug => { const s=services.find(item=>item.slug===slug); return s ? <article key={s.slug} className="bg-background p-7">
+              <h3 className="text-xl">{s.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.blurb}</p>
+              <p className="mt-5 text-sm font-medium">{s.price}</p>
+              <Link to="/services/$slug" params={{slug:s.slug}} className="mt-5 inline-block text-[0.66rem] uppercase tracking-[0.18em] text-navy hover:text-gold">View service details →</Link>
+            </article> : null; })}
+          </div>
+        </div>
+      </section>)}
     </div>
-  );
+    <section className="mx-auto max-w-3xl px-6 py-24 text-center">
+      <h2 className="text-3xl sm:text-4xl">Need a joined-up <span className="italic text-gold">campaign?</span></h2>
+      <p className="mt-5 text-sm leading-relaxed text-muted-foreground">Tell us about your book, the audience you want to reach and the services you have in mind.</p>
+      <Link to="/contact" className="mt-8 inline-block bg-navy px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-cream hover:bg-navy-deep">Request a campaign proposal</Link>
+    </section>
+    <Footer />
+  </div>;
 }

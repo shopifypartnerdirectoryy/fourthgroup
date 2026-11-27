@@ -77,21 +77,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Fourth Group & Co | Author Marketing Studio" },
+      { title: "Fourth Group & Co | Book Promotion & Author Marketing Agency" },
       {
         name: "description",
         content:
-          "Fourth Group & Co is an author marketing studio: Listopia campaigns, cinematic book trailers, author websites and Amazon SEO.",
+          "Fourth Group & Co is a book promotion, publicity and author marketing agency offering reader campaigns, social promotion, creative production and author platform services.",
       },
       { name: "author", content: "Fourth Group & Co" },
-      { property: "og:title", content: "Fourth Group & Co | Author Marketing Studio" },
+      { name: "theme-color", content: "#101b2b" },
+      { property: "og:title", content: "Fourth Group & Co | Book Promotion & Author Marketing Agency" },
       {
         property: "og:description",
         content: "Author marketing, executed with the care a manuscript deserves.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Fourth Group & Co" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Fourth Group & Co",
+        url: "https://fourthgroup.co",
+        email: "info@fourthgroupco.com",
+        description: "Book promotion, publicity and author marketing agency.",
+        knowsAbout: ["Book promotion", "Author marketing", "Audiobook production", "Book trailers", "Author websites", "Book-to-screen packaging"]
+      })
+    }],
     links: [
       {
         rel: "stylesheet",

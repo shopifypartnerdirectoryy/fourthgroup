@@ -10,14 +10,15 @@ export const Route = createFileRoute("/work")({
       {
         name: "description",
         content:
-          "Selected author marketing work from Fourth Group & Co: cinematic book trailers, Listopia campaigns, author websites and listing optimisation.",
+          "An overview of Fourth Group & Co's author marketing capabilities, including creative production, reader discovery and author platforms.",
       },
       { property: "og:title", content: "Work | Fourth Group & Co" },
       {
         property: "og:description",
-        content: "Selected campaigns, films and author websites from Fourth Group & Co.",
+        content: "An overview of campaign services and creative deliverables offered by Fourth Group & Co.",
       },
     ],
+      links: [{ rel: "canonical", href: "https://fourthgroup.co/work" }],
   }),
   component: Work,
 });
@@ -25,22 +26,22 @@ export const Route = createFileRoute("/work")({
 const disciplines = [
   {
     title: "Cinematic book trailers",
-    text: "Short films scored, cut and graded in house, delivered in every aspect ratio a launch needs.",
+    text: "Book-led trailer concepts, storyboards, editing and final video files prepared for agreed campaign placements.",
     meta: "Film",
   },
   {
     title: "Listopia campaigns",
-    text: "List-by-list placement work, reported with live links so a position can always be checked.",
+    text: "Relevant list research, compliant reader engagement and live placement links where placements are secured.",
     meta: "Discovery",
   },
   {
     title: "Author websites",
-    text: "Editorial sites built for readers who arrive from a trailer and stay for the newsletter.",
+    text: "Responsive author websites designed around books, biography, events, press and reader journeys.",
     meta: "Design & build",
   },
   {
     title: "Listing optimisation",
-    text: "Categories, keywords and A+ content rewritten around how buyers actually search.",
+    text: "Review of relevant keywords, categories, book descriptions and A+ content recommendations.",
     meta: "Retail",
   },
 ];
@@ -52,15 +53,13 @@ function Work() {
 
       <section className="surface-navy pt-40 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="eyebrow">The reel</p>
+          <p className="eyebrow">Our capabilities</p>
           <h1 className="mt-5 max-w-3xl text-5xl leading-[1.05] text-cream sm:text-6xl">
-            Work made <span className="italic text-gold">like short films.</span>
+            Creative work, <span className="italic text-gold">built around books.</span>
           </h1>
           <div className="rule-gold mt-8 w-40" />
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-cream/70">
-            Our full portfolio is shared privately with authors during a project conversation —
-            client titles stay confidential until they are published. Here is the shape of what we
-            deliver.
+            This page outlines the types of work we can undertake. Public client examples are added only when the project details and publication permissions have been verified.
           </p>
         </div>
       </section>
@@ -83,13 +82,13 @@ function Work() {
 
         <div className="mt-20 text-center">
           <h2 className="text-3xl sm:text-4xl">
-            Want to see the reel <span className="italic text-gold">for your genre?</span>
+            Looking for examples <span className="italic text-gold">relevant to your book?</span>
           </h2>
           <Link
             to="/contact"
             className="mt-8 inline-block bg-navy px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-cream transition-colors hover:bg-navy-deep"
           >
-            Request the portfolio
+            Ask about approved examples
           </Link>
         </div>
       </section>

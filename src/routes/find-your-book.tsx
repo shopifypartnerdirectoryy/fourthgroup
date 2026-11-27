@@ -21,6 +21,7 @@ export const Route = createFileRoute("/find-your-book")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+      links: [{ rel: "canonical", href: "https://fourthgroup.co/find-your-book" }],
   }),
   component: FindYourBook,
 });
