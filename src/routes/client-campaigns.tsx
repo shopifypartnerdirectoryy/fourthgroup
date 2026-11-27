@@ -14,6 +14,7 @@ export const Route = createFileRoute("/client-campaigns")({
 
 const deliverables = [
   ["Book discovery", "Reader-focused promotion across appropriate discovery channels, with agreed links and delivery reporting."],
+      links: [{ rel: "canonical", href: "https://fourthgroup.co/client-campaigns" }],
   ["Creative campaigns", "Book trailers, short-form social creative and coordinated launch assets built around the title."],
   ["Author platform", "Website design, redesign and digital materials that help readers explore an author's work."],
   ["Retail presentation", "Book listing and metadata recommendations designed to improve relevance and clarity."],
