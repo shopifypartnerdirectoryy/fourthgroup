@@ -45,28 +45,15 @@ function About() {
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
         <p className="eyebrow">The team</p>
         <h2 className="mt-5 text-4xl sm:text-5xl">
-          Three people, <span className="italic text-gold">no handoffs.</span>
+          A leadership team, <span className="italic text-gold">one shared standard.</span>
         </h2>
         <div className="mt-16 grid gap-10 md:grid-cols-3">
           {team.map((m) => (
             <article key={m.name}>
-              <img
-                src={m.image}
-                alt={m.name}
-                width={800}
-                height={1000}
-                loading="lazy"
-                className="aspect-[4/5] w-full bg-secondary object-cover object-top"
-              />
+              <div className="flex aspect-[4/5] items-end bg-navy p-8"><span className="font-display text-5xl text-gold">{m.name.split(" ").map((part) => part[0]).join("")}</span></div>
               <h3 className="mt-6 text-2xl">{m.name}</h3>
               <p className="mt-1 text-[0.68rem] uppercase tracking-[0.22em] text-gold">{m.role}</p>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{m.bio}</p>
-              <a
-                href={`mailto:${m.email}`}
-                className="mt-4 inline-block text-sm text-navy underline-offset-4 hover:text-gold hover:underline"
-              >
-                {m.email}
-              </a>
             </article>
           ))}
         </div>
