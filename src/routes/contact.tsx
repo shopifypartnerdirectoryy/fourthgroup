@@ -15,7 +15,8 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
-const initial = { name: "", email: "", bookTitle: "", genre: "", stage: "", launchDate: "", packageChoice: "", website: "", selectedServices: [] as string[], goals: "" };
+const initial = { name: "", email: "", bookTitle: "", genre: "", stage: "", launchDate: "", packageChoice: "", website: "", selectedServices: [] as string[],
+      links: [{ rel: "canonical", href: "https://fourthgroup.co/contact" }], goals: "" };
 
 function Contact() {
   const [form, setForm] = useState(initial);
