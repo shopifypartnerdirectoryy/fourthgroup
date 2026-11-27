@@ -11,12 +11,12 @@ export const Route = createFileRoute("/pricing")({
       {
         name: "description",
         content:
-          "Goodreads Listopia campaigns from $95. Trailers, author websites and Amazon SEO quoted per book by Fourth Group & Co.",
+          "Three existing Goodreads discovery packages from $95, alongside bespoke author marketing and production services.",
       },
       { property: "og:title", content: "Pricing | Fourth Group & Co" },
       {
         property: "og:description",
-        content: "Transparent Listopia pricing and per-project quotes, with no long lock-ins.",
+        content: "Clear campaign pricing and bespoke project quotes.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -38,8 +38,7 @@ function Pricing() {
           </h1>
           <div className="rule-gold mt-8 w-40" />
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-cream/70">
-            No retainers you cannot leave and no impressions you cannot verify. Listopia work is
-            priced openly; everything else is quoted as a body of work with a stated outcome.
+            The three published prices below are retained from the existing Starter Placement, Standard Campaign and Premium Visibility tiers. Bespoke services are quoted after the scope and deliverables are agreed. No package guarantees rankings, votes, sales or bestseller status.
           </p>
         </div>
       </section>
@@ -47,7 +46,7 @@ function Pricing() {
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
         <p className="eyebrow">Goodreads Listopia</p>
         <h2 className="mt-5 text-4xl sm:text-5xl">
-          Three ways to <span className="italic text-gold">get seen.</span>
+          Three campaign options, <span className="italic text-gold">clearly scoped.</span>
         </h2>
 
         <div className="mt-14 grid gap-8 lg:grid-cols-3">
@@ -78,7 +77,7 @@ function Pricing() {
                     : "bg-navy text-cream hover:bg-navy-deep"
                 }`}
               >
-                Start with {t.name.split(" ")[0]}
+                Enquire about this package
               </Link>
             </article>
           ))}
@@ -158,7 +157,7 @@ function Pricing() {
         </div>
 
         <div className="mt-20 text-center">
-          <p className="eyebrow">Taking four titles next quarter</p>
+          <p className="eyebrow">Enquiries now open</p>
           <h2 className="mt-5 text-3xl sm:text-4xl">
             Let the right readers <span className="italic text-gold">find your book.</span>
           </h2>
