@@ -10,12 +10,12 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Fourth Group & Co is a small author marketing studio. Meet the team behind the campaigns, films and author websites.",
+          "Meet the leadership team at Fourth Group & Co, a full-service book promotion, publicity and author marketing agency.",
       },
       { property: "og:title", content: "About the Studio | Fourth Group & Co" },
       {
         property: "og:description",
-        content: "A small studio taking a short list of books each quarter, handled properly.",
+        content: "A considered agency approach to book promotion, publicity and author marketing.",
       },
     ],
       links: [{ rel: "canonical", href: "https://fourthgroup.co/about" }],
