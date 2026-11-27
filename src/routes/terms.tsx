@@ -4,7 +4,7 @@ import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/terms")({
   head: () => ({ meta: [
-    { title: "Terms of Use | Fourth Group & Co" },
+    { title: "Terms & Conditions | Fourth Group & Co" },
     { name: "description", content: "General terms for using the Fourth Group & Co website and enquiring about services." },
   ] }),
   component: Terms,
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/terms")({
 function Terms() {
   return <div className="min-h-screen bg-background">
     <Header />
-    <section className="surface-navy pt-40 pb-20"><div className="mx-auto max-w-4xl px-6 lg:px-10"><p className="eyebrow">Legal</p><h1 className="mt-5 text-5xl text-cream">Terms of <span className="italic text-gold">use.</span></h1><div className="rule-gold mt-8 w-40" /></div></section>
+    <section className="surface-navy pt-40 pb-20"><div className="mx-auto max-w-4xl px-6 lg:px-10"><p className="eyebrow">Legal</p><h1 className="mt-5 text-5xl text-cream">Terms <span className="italic text-gold">&amp; conditions.</span></h1><div className="rule-gold mt-8 w-40" /></div></section>
     <main className="mx-auto max-w-4xl space-y-10 px-6 py-20 text-sm leading-relaxed text-muted-foreground lg:px-10">
       <section><h2 className="text-2xl text-foreground">Website information</h2><p className="mt-4">The website provides general information about Fourth Group &amp; Co and the services that may be available. Descriptions are indicative and do not constitute an offer to provide a particular service until a written scope is agreed.</p></section>
       <section><h2 className="text-2xl text-foreground">Project agreements</h2><p className="mt-4">Before work begins, the parties should agree in writing on the deliverables, schedule, fees, payment arrangements, approvals, revisions, rights and any third-party costs relevant to the project. The written project agreement will govern the commissioned work.</p></section>
