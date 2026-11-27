@@ -44,7 +44,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-3 lg:flex xl:gap-4">
+        <nav className="hidden items-center gap-3 2xl:flex xl:gap-4">
           {nav.map((item) => (
             <Link
               key={item.to}
@@ -66,14 +66,14 @@ export function Header() {
             to="/contact"
             className="whitespace-nowrap border border-gold/60 px-3 py-2 text-[0.6rem] uppercase tracking-[0.12em] text-gold transition-colors hover:bg-gold hover:text-navy-deep xl:px-4 xl:py-2.5 xl:text-[0.66rem] xl:tracking-[0.16em]"
           >
-            Request a Proposal
+            Request a Campaign Proposal
           </Link>
         </nav>
 
         <button
           type="button"
           aria-label="Toggle menu"
-          className="text-cream lg:hidden"
+          className="text-cream 2xl:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -81,7 +81,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-gold/20 bg-navy-deep px-6 py-6 lg:hidden">
+        <div className="border-t border-gold/20 bg-navy-deep px-6 py-6 2xl:hidden">
           <div className="flex flex-col gap-5">
             {nav.map((item) => (
               <Link
