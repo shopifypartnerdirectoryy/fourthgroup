@@ -22,6 +22,7 @@ export const Route = createFileRoute("/services/$slug")({
         { property: "og:description", content: description },
         { property: "og:type", content: "article" },
       ],
+      links: [{ rel: "canonical", href: `https://fourthgroup.co/services/${loaderData?.service.slug ?? ""}` }],
     };
   },
   component: ServiceDetail,
