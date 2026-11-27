@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Fourth Group & Co | Author Marketing Studio" },
+      { title: "Fourth Group & Co | Book Promotion & Author Marketing Agency" },
       {
         name: "description",
         content:
@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: "Fourth Group & Co" },
       { name: "theme-color", content: "#101b2b" },
-      { property: "og:title", content: "Fourth Group & Co | Author Marketing Studio" },
+      { property: "og:title", content: "Fourth Group & Co | Book Promotion & Author Marketing Agency" },
       {
         property: "og:description",
         content: "Author marketing, executed with the care a manuscript deserves.",
