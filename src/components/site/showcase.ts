@@ -23,10 +23,55 @@ export const reviewFilters = [
   "Amazon SEO & Book Listing Optimisation",
 ];
 
+export const launchPackages = [
+  {
+    name: "The Debut Visibility Suite",
+    price: "$395",
+    summary: "A coordinated first campaign for a new title.",
+    features: ["3D book mockups", "15-second book trailer", "TikTok feature", "Instagram feature", "Goodreads placement on 2 lists"],
+    featured: false,
+  },
+  {
+    name: "The Bestseller Momentum Campaign",
+    price: "$1,150",
+    summary: "A broader month-long campaign combining creative, reader outreach and social content.",
+    features: ["30-second book trailer", "30-day social media management · 30 content pieces", "Reader email campaign · 1,000 contacts", "Goodreads placement on 5 lists", "Standard reader book challenge"],
+    featured: true,
+  },
+  {
+    name: "The Complete Author Brand & Launch",
+    price: "$2,450",
+    summary: "An integrated author brand and launch package with a dedicated digital home.",
+    features: ["Custom author website", "60-second book trailer", "30-day social media management · 30 content pieces", "Reader email campaign · 2,500 contacts", "Premium reader book challenge"],
+    featured: false,
+  },
+];
+
 export const pricingTiers = [
-  { name: "The Debut Visibility Suite", legacyName: "Starter Placement", price: "$95", tag: "Entry campaign", summary: "A focused first step into Goodreads discovery for a published title.", features: ["Single Listopia placement", "Genre-matched list selection", "Genuine reader activity only; no purchased votes", "End-of-campaign position report"], featured: false },
-  { name: "The Bestseller Momentum Campaign", legacyName: "Standard Campaign", price: "$156", tag: "Expanded discovery", summary: "A broader Listopia placement campaign with more extensive reporting.", features: ["Multiple Listopia placements", "Genre-matched list selection", "Genuine reader activity only; no purchased votes", "Campaign progress update", "Report with live, checkable links"], featured: true },
-  { name: "The Complete Author Brand & Launch", legacyName: "Premium Visibility", price: "$375", tag: "Broader launch support", summary: "The existing premium Listopia tier, presented as a starting point for a wider author launch conversation.", features: ["Maximum Listopia placements within agreed scope", "Multi-genre targeting where relevant", "Genuine reader activity only; no purchased votes", "Weekly progress updates", "Comprehensive documented report", "Priority support"], featured: false },
+  {
+    name: "Starter Placement",
+    price: "$95",
+    tag: "Single list",
+    summary: "A first, careful step into Goodreads discovery.",
+    features: ["Single Listopia placement", "Genre-matched list selection", "Genuine reader activity only", "End-of-campaign position report"],
+    featured: false,
+  },
+  {
+    name: "Standard Campaign",
+    price: "$156",
+    tag: "Existing middle tier",
+    summary: "The existing multi-placement Listopia package.",
+    features: ["Multiple Listopia placements", "Genre-matched list selection", "Genuine reader activity only", "Progress update", "Report with live, checkable links"],
+    featured: true,
+  },
+  {
+    name: "Premium Visibility",
+    price: "$375",
+    tag: "Existing premium tier",
+    summary: "The existing premium Listopia placement package.",
+    features: ["Maximum Listopia placements within agreed scope", "Multi-genre targeting where relevant", "Genuine reader activity only", "Progress updates", "Comprehensive documented report"],
+    featured: false,
+  },
 ];
 
 export const pricingComparison = { rows: [
