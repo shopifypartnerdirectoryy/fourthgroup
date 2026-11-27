@@ -10,12 +10,12 @@ export const Route = createFileRoute("/our-team")({
       {
         name: "description",
         content:
-          "Meet the people at Fourth Group & Co who read your book before they market it — strategy, film and author platform, all in-house.",
+          "Meet Matthew Collins, Malik Bok and Bawa Fawaz, the leadership team behind Fourth Group & Co.",
       },
       { property: "og:title", content: "Our Team | Fourth Group & Co" },
       {
         property: "og:description",
-        content: "The people who read your book before they market it.",
+        content: "The leadership team behind Fourth Group & Co.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
