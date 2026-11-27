@@ -9,7 +9,9 @@ export const Route = createFileRoute("/portfolio")({
     { property: "og:title", content: "Portfolio | Fourth Group & Co" },
     { property: "og:description", content: "Book promotion, publicity and author marketing work." },
     { property: "og:type", content: "website" },
-  ] }),
+  ],
+    links: [{ rel: "canonical", href: "https://fourthgroup.co/portfolio" }],
+  }),
   component: Portfolio,
 });
 
