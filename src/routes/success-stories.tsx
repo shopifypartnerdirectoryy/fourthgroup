@@ -14,6 +14,7 @@ export const Route = createFileRoute("/success-stories")({
 
 const stages = [
   ["01", "The brief", "We understand the book, its intended readers, publishing stage, objectives and practical constraints."],
+      links: [{ rel: "canonical", href: "https://fourthgroup.co/success-stories" }],
   ["02", "The plan", "We recommend a suitable mix of services and define deliverables, schedule, approvals and price."],
   ["03", "Delivery", "We produce and coordinate the agreed creative assets and campaign activity, keeping the author informed."],
   ["04", "The report", "We provide the agreed assets, links and delivery record, and identify any next steps without overstating results."],
