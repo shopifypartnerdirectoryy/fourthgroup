@@ -4,7 +4,7 @@ import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({ meta: [
-    { title: "Privacy Notice | Fourth Group & Co" },
+    { title: "Privacy Policy | Fourth Group & Co" },
     { name: "description", content: "How to contact Fourth Group & Co about information shared in an enquiry." },
   ] }),
   component: Privacy,
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/privacy")({
 function Privacy() {
   return <div className="min-h-screen bg-background">
     <Header />
-    <section className="surface-navy pt-40 pb-20"><div className="mx-auto max-w-4xl px-6 lg:px-10"><p className="eyebrow">Legal</p><h1 className="mt-5 text-5xl text-cream">Privacy <span className="italic text-gold">notice.</span></h1><div className="rule-gold mt-8 w-40" /></div></section>
+    <section className="surface-navy pt-40 pb-20"><div className="mx-auto max-w-4xl px-6 lg:px-10"><p className="eyebrow">Legal</p><h1 className="mt-5 text-5xl text-cream">Privacy <span className="italic text-gold">policy.</span></h1><div className="rule-gold mt-8 w-40" /></div></section>
     <main className="mx-auto max-w-4xl space-y-10 px-6 py-20 text-sm leading-relaxed text-muted-foreground lg:px-10">
       <section><h2 className="text-2xl text-foreground">Information you choose to send</h2><p className="mt-4">If you contact Fourth Group &amp; Co by email, the information in your message and any attachments will be received and handled as correspondence so that we can respond to your enquiry and discuss potential services.</p></section>
       <section><h2 className="text-2xl text-foreground">Website enquiry forms</h2><p className="mt-4">The current enquiry and review forms prepare a message in your device's email application. They do not submit information to a website form-processing server. Your email application and email provider handle the message when you choose to send it.</p></section>
