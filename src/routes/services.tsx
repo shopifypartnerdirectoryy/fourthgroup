@@ -9,7 +9,9 @@ export const Route = createFileRoute("/services")({
     { name: "description", content: "Reader outreach, social growth, creative production, audiobook services and author digital presence from Fourth Group & Co." },
     { property: "og:title", content: "Book Marketing Services | Fourth Group & Co" },
     { property: "og:description", content: "Explore the four service pillars and eleven core author marketing services." },
-  ] }),
+  ],
+    links: [{ rel: "canonical", href: "https://fourthgroup.co/services" }],
+  }),
   component: Services,
 });
 
