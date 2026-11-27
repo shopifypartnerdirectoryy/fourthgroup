@@ -9,7 +9,9 @@ export const Route = createFileRoute("/reviews")({
     { name: "description", content: "Author feedback for Fourth Group & Co, published only after project verification and author approval." },
     { property: "og:title", content: "Author Reviews | Fourth Group & Co" },
     { property: "og:description", content: "Verified author feedback, shared with permission." },
-  ] }),
+  ],
+    links: [{ rel: "canonical", href: "https://fourthgroup.co/reviews" }],
+  }),
   component: Reviews,
 });
 
