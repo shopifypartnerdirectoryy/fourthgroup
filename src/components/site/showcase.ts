@@ -53,7 +53,7 @@ export const pricingTiers = [
     price: "$95",
     tag: "Single list",
     summary: "A first, careful step into Goodreads discovery.",
-    features: ["Single Listopia placement", "Genre-matched list selection", "Genuine reader activity only", "End-of-campaign position report"],
+    features: ["Single Listopia placement", "Genre-matched list selection", "Real reader votes only", "End-of-campaign position report"],
     featured: false,
   },
   {
@@ -61,7 +61,7 @@ export const pricingTiers = [
     price: "$156",
     tag: "Existing middle tier",
     summary: "The existing multi-placement Listopia package.",
-    features: ["Multiple Listopia placements", "Genre-matched list selection", "Genuine reader activity only", "Progress update", "Report with live, checkable links"],
+    features: ["Multiple Listopia placements", "Genre-matched list selection", "Real reader votes only", "Priority reader-network engagement", "Full report with live, checkable links"],
     featured: true,
   },
   {
@@ -69,17 +69,18 @@ export const pricingTiers = [
     price: "$375",
     tag: "Existing premium tier",
     summary: "The existing premium Listopia placement package.",
-    features: ["Maximum Listopia placements within agreed scope", "Multi-genre targeting where relevant", "Genuine reader activity only", "Progress updates", "Comprehensive documented report"],
+    features: ["Maximum Listopia placements", "Multi-genre targeting", "Full reader-network engagement", "Weekly progress updates", "Comprehensive documented report", "Priority support under one hour"],
     featured: false,
   },
 ];
 
 export const pricingComparison = { rows: [
   { label: "Existing tier", values: ["Starter Placement", "Standard Campaign", "Premium Visibility"] },
-  { label: "List placements", values: ["One", "Multiple", "Maximum within agreed scope"] },
-  { label: "Genre targeting", values: ["Single genre", "Single genre", "Multi-genre where relevant"] },
-  { label: "Reader activity", values: ["Genuine only", "Genuine only", "Genuine only"] },
-  { label: "Progress updates", values: ["End of campaign", "Campaign update", "Weekly"] },
+  { label: "List placements", values: ["One", "Multiple", "Maximum"] },
+  { label: "Genre targeting", values: ["Single genre", "Single genre", "Multi genre"] },
+  { label: "Real reader votes", values: ["Yes", "Yes", "Yes"] },
+  { label: "Network engagement", values: ["Standard", "Priority", "Full network"] },
+  { label: "Progress updates", values: ["End of campaign", "Mid and end", "Weekly"] },
   { label: "Report with live links", values: ["Basic", "Full", "Comprehensive"] },
   { label: "Priority support", values: ["—", "—", "Yes"] },
 ] };
