@@ -6,7 +6,7 @@ import logo from "@/assets/logo.png.asset.json";
 const nav = [
   { to: "/services", label: "Services" },
   { to: "/client-campaigns", label: "Campaigns" },
-  { to: "/pricing", label: "Pricing" },
+  { to: "/pricing", label: "Launch Packages" },
   { to: "/portfolio", label: "Portfolio" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
@@ -66,7 +66,7 @@ export function Header() {
             to="/contact"
             className="whitespace-nowrap border border-gold/60 px-3 py-2 text-[0.6rem] uppercase tracking-[0.12em] text-gold transition-colors hover:bg-gold hover:text-navy-deep xl:px-4 xl:py-2.5 xl:text-[0.66rem] xl:tracking-[0.16em]"
           >
-            Start a project
+            Request a Proposal
           </Link>
         </nav>
 
