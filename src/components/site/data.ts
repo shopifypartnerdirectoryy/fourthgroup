@@ -18,7 +18,7 @@ export const servicePillars = [
   { title: "Reader Outreach & Publicity", description: "Permission-based reader outreach, discovery placements and participation-led campaigns.", slugs: ["reader-email-campaigns", "goodreads-listopia", "reader-book-challenges"] },
   { title: "Social Growth & Brand Management", description: "Platform-specific features and managed social content that build a consistent author presence.", slugs: ["tiktok-book-features", "instagram-book-features", "social-media-management"] },
   { title: "Visual Production & Audio", description: "Book-led visual creative, mockups, trailers and audiobook production.", slugs: ["book-trailers", "3d-book-mockups", "audiobook-production"] },
-  { title: "Author Digital Presence", description: "Author websites, redesigns and retail listing optimisation.", slugs: ["author-websites", "author-website-redesign", "amazon-seo"] },
+  { title: "Author Digital Presence", description: "Author websites, redesigns and retail listing optimisation.", slugs: ["author-websites", "author-website-redesign"] },
 ];
 
 export const team = [
