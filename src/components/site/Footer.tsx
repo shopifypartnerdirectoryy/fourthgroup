@@ -47,7 +47,6 @@ export function Footer() {
               <li><Link to="/about" className="hover:text-gold">About</Link></li>
               <li><Link to="/our-team" className="hover:text-gold">Our Team</Link></li>
               <li><Link to="/reviews" className="hover:text-gold">Author Reviews</Link></li>
-              <li><Link to="/find-your-book" className="hover:text-gold">Find Your Book</Link></li>
             </ul>
           </div>
 
@@ -75,7 +74,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-cream/10 pt-6 text-xs tracking-wider text-cream/45 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap gap-5"><Link to="/privacy" className="hover:text-gold">Privacy</Link><Link to="/terms" className="hover:text-gold">Terms</Link></div>
+          <div className="flex flex-wrap gap-5"><Link to="/privacy" className="hover:text-gold">Privacy Policy</Link><Link to="/terms" className="hover:text-gold">Terms &amp; Conditions</Link></div>
           <p>© {new Date().getFullYear()} Fourth Group &amp; Co. All rights reserved.</p>
           <p className="uppercase tracking-[0.22em]">Manuscript to market</p>
         </div>
