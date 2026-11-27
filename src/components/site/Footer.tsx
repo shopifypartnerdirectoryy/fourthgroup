@@ -66,7 +66,7 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/client-login" className="hover:text-gold">
-                  Client login
+                  Client support
                 </Link>
               </li>
             </ul>
