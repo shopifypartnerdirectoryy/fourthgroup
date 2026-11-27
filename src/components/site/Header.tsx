@@ -6,15 +6,9 @@ import logo from "@/assets/logo.png.asset.json";
 const nav = [
   { to: "/services", label: "Services" },
   { to: "/client-campaigns", label: "Campaigns" },
-  { to: "/audiobook-production", label: "Audiobooks" },
-  { to: "/movie-adaptation", label: "Screen" },
-  { to: "/find-your-book", label: "Find Your Book" },
-  { to: "/portfolio", label: "Portfolio" },
-  { to: "/success-stories", label: "Success Stories" },
   { to: "/pricing", label: "Pricing" },
+  { to: "/portfolio", label: "Portfolio" },
   { to: "/about", label: "About" },
-  { to: "/our-team", label: "Our Team" },
-  { to: "/reviews", label: "Reviews" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
