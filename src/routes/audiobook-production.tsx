@@ -14,6 +14,7 @@ export const Route = createFileRoute("/audiobook-production")({
 
 const steps = [
   ["Narration planning", "Discuss the manuscript, intended audience, narration style, voice requirements and production schedule."],
+      links: [{ rel: "canonical", href: "https://fourthgroup.co/audiobook-production" }],
   ["Recording", "Coordinate the recording approach and the agreed narration workflow, including author review points."],
   ["Editing & quality", "Edit and review the audio for consistency, clarity and the technical requirements agreed for delivery."],
   ["Mastering & handover", "Prepare final audio files and supporting details to the agreed delivery specification."],
