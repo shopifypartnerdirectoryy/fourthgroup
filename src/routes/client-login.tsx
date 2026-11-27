@@ -7,7 +7,9 @@ export const Route = createFileRoute("/client-login")({
   head: () => ({ meta: [
     { title: "Client Support | Fourth Group & Co" },
     { name: "description", content: "Contact Fourth Group & Co for access to current campaign reports and project deliverables." },
-  ] }),
+  ],
+    links: [{ rel: "canonical", href: "https://fourthgroup.co/client-login" }],
+  }),
   component: ClientLogin,
 });
 
