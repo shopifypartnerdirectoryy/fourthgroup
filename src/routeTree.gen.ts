@@ -110,17 +110,7 @@ const ServicesSlugRoute = ServicesSlugRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
-'/audiobook-production': typeof AudiobookProductionRoute
-  '/client-campaigns': typeof ClientCampaignsRoute
-  '/movie-adaptation': typeof MovieAdaptationRoute
-  '/privacy': typeof PrivacyRoute
-  '/terms': typeof TermsRoute
-'/audiobook-production': typeof AudiobookProductionRoute
-  '/client-campaigns': typeof ClientCampaignsRoute
-  '/movie-adaptation': typeof MovieAdaptationRoute
-  '/privacy': typeof PrivacyRoute
-  '/terms': typeof TermsRoute
-'/audiobook-production': typeof AudiobookProductionRoute
+  '/audiobook-production': typeof AudiobookProductionRoute
   '/client-campaigns': typeof ClientCampaignsRoute
   '/movie-adaptation': typeof MovieAdaptationRoute
   '/privacy': typeof PrivacyRoute
@@ -140,6 +130,11 @@ export interface FileRoutesByFullPath {
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesByTo {
+  '/audiobook-production': typeof AudiobookProductionRoute
+  '/client-campaigns': typeof ClientCampaignsRoute
+  '/movie-adaptation': typeof MovieAdaptationRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/client-login': typeof ClientLoginRoute
@@ -155,6 +150,11 @@ export interface FileRoutesByTo {
   '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesById {
+  '/audiobook-production': typeof AudiobookProductionRoute
+  '/client-campaigns': typeof ClientCampaignsRoute
+  '/movie-adaptation': typeof MovieAdaptationRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
