@@ -41,7 +41,7 @@ function Home() {
           </h1>
           <div className="rule-gold mt-8 w-40" />
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-cream/75">
-            Fourth Group &amp; Co is a full-service book promotion and author marketing agency. We bring strategy, creative production and reader-focused campaigns together around each title — from first announcement to long-term discovery.
+            Strategic book campaigns built to reach readers, press and, where appropriate, screen-industry decision-makers. Fourth Group &amp; Co brings publicity, creative production and reader-focused marketing together around each title.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link to="/contact" className="group inline-flex items-center gap-3 bg-gold px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-navy-deep transition-colors hover:bg-gold-soft">Request a Campaign Proposal <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></Link>
