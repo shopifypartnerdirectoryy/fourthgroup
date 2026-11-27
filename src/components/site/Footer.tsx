@@ -28,52 +28,17 @@ export function Footer() {
           <div>
             <h3 className="eyebrow">Studio</h3>
             <ul className="mt-5 space-y-3 text-sm text-cream/70">
-              <li>
-                <Link to="/client-campaigns" className="hover:text-gold">Client Campaigns</Link>
-              </li>
+              <li><Link to="/services" className="hover:text-gold">Services</Link></li>
+              <li><Link to="/client-campaigns" className="hover:text-gold">Client Campaigns</Link></li>
               <li><Link to="/audiobook-production" className="hover:text-gold">Audiobook Production</Link></li>
-              <li><Link to="/movie-adaptation" className="hover:text-gold">Screen Opportunities</Link></li>
-              <li>
-                <Link to="/services" className="hover:text-gold">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/find-your-book" className="hover:text-gold">
-                  Find Your Book
-                </Link>
-              </li>
-              <li>
-                <Link to="/portfolio" className="hover:text-gold">
-                  Portfolio
-                </Link>
-              </li>
+              <li><Link to="/movie-adaptation" className="hover:text-gold">Publishing &amp; Screen</Link></li>
+              <li><Link to="/portfolio" className="hover:text-gold">Portfolio</Link></li>
+              <li><Link to="/success-stories" className="hover:text-gold">Campaign Approach</Link></li>
+              <li><Link to="/pricing" className="hover:text-gold">Pricing</Link></li>
+              <li><Link to="/about" className="hover:text-gold">About</Link></li>
               <li><Link to="/our-team" className="hover:text-gold">Our Team</Link></li>
               <li><Link to="/reviews" className="hover:text-gold">Author Reviews</Link></li>
-              <li><Link to="/success-stories" className="hover:text-gold">Campaign Approach</Link></li>
               <li><Link to="/find-your-book" className="hover:text-gold">Find Your Book</Link></li>
-              <li>
-                <Link to="/our-team" className="hover:text-gold">
-                  Our Team
-                </Link>
-              </li>
-
-
-              <li>
-                <Link to="/pricing" className="hover:text-gold">
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link to="/reviews" className="hover:text-gold">
-                  Reviews
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="hover:text-gold">
-                  About
-                </Link>
-              </li>
             </ul>
           </div>
 
