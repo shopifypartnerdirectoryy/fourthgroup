@@ -8,13 +8,14 @@ export const Route = createFileRoute("/audiobook-production")({
     { name: "description", content: "Audiobook narration planning, recording coordination, editing, quality review and mastering for authors." },
     { property: "og:title", content: "Audiobook Production | Fourth Group & Co" },
     { property: "og:description", content: "A considered production pathway from manuscript to finished audiobook files." },
-  ] }),
+  ],
+    links: [{ rel: "canonical", href: "https://fourthgroup.co/audiobook-production" }],
+  }),
   component: AudiobookProduction,
 });
 
 const steps = [
   ["Narration planning", "Discuss the manuscript, intended audience, narration style, voice requirements and production schedule."],
-      links: [{ rel: "canonical", href: "https://fourthgroup.co/audiobook-production" }],
   ["Recording", "Coordinate the recording approach and the agreed narration workflow, including author review points."],
   ["Editing & quality", "Edit and review the audio for consistency, clarity and the technical requirements agreed for delivery."],
   ["Mastering & handover", "Prepare final audio files and supporting details to the agreed delivery specification."],
