@@ -11,7 +11,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Tell Fourth Group & Co about your book. Email info@fourthgroupco.com for Listopia campaigns, trailers, author websites and Amazon SEO.",
+          "Contact Fourth Group & Co about book promotion, publicity, author marketing, audiobook production and creative services.",
       },
       { property: "og:title", content: "Contact | Fourth Group & Co" },
       {
@@ -98,6 +98,7 @@ function Contact() {
             </label>
             <input
               id="title"
+              required
               className={field}
               value={form.title}
               onChange={(e) => setForm({ ...form, title: e.target.value })}
@@ -129,6 +130,7 @@ function Contact() {
             </label>
             <textarea
               id="message"
+              required
               rows={6}
               className={field}
               value={form.message}
@@ -143,7 +145,7 @@ function Contact() {
             Send enquiry
           </button>
           <p className="text-xs text-muted-foreground">
-            This opens your email client with the details filled in.
+            Your email application will open with your enquiry prepared. The website does not submit this form to a server.
           </p>
         </form>
 
@@ -160,15 +162,13 @@ function Contact() {
           <div>
             <h2 className="eyebrow">Response time</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              We reply in under one hour on business days. If your launch date is close, say so in the first
-              line and we will move you up.
+              Include your preferred timeline and any upcoming launch date so we can understand the urgency of your enquiry.
             </p>
           </div>
           <div>
             <h2 className="eyebrow">Availability</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              We take a limited number of books each quarter so every campaign stays with the people
-              who scoped it.
+              Every project is discussed and scoped before work begins. Availability and delivery dates are confirmed individually.
             </p>
           </div>
         </aside>
