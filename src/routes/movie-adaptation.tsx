@@ -4,36 +4,42 @@ import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/movie-adaptation")({
   head: () => ({ meta: [
-    { title: "Publishing & Screen Opportunities | Fourth Group & Co" },
-    { name: "description", content: "An initial editorial conversation about book adaptation potential and screen-ready author materials." },
-    { property: "og:title", content: "Publishing & Screen Opportunities | Fourth Group & Co" },
-    { property: "og:description", content: "Explore the adaptation potential of a book with a clear, realistic first assessment." },
+    { title: "Screen Adaptation | Fourth Group & Co" },
+    { name: "description", content: "Book-to-screen packaging and adaptation potential assessment for authors exploring film and television pathways." },
+    { property: "og:title", content: "Screen Adaptation | Fourth Group & Co" },
+    { property: "og:description", content: "Explore story assessment, character development and submission readiness." },
   ] }),
   component: MovieAdaptation,
 });
+
+const stages = [
+  ["Story assessment", "Review the premise, themes, narrative arc and the elements that could translate to a screen format."],
+  ["Character development", "Consider principal characters, relationships, motivations and the dramatic engine of the story."],
+  ["Submission readiness", "Discuss rights position, project readiness and the information required before any professional submission."],
+  ["Representation pathway", "Where genuine industry relationships and a suitable written mandate exist, representation or producer submissions may be discussed as a separate service."],
+];
 
 function MovieAdaptation() {
   return <div className="min-h-screen bg-background">
     <Header />
     <section className="surface-navy pt-40 pb-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <p className="eyebrow">Publishing & screen opportunities</p>
+        <p className="eyebrow">Book-to-screen packaging</p>
         <h1 className="mt-5 max-w-3xl text-5xl leading-[1.05] text-cream sm:text-6xl">When a story has <span className="italic text-gold">another life.</span></h1>
         <div className="rule-gold mt-8 w-40" />
-        <p className="mt-8 max-w-2xl text-base leading-relaxed text-cream/70">Some books invite a conversation about adaptation. We can help authors consider the story's screen potential and prepare a concise, book-led overview as an initial step.</p>
+        <p className="mt-8 max-w-2xl text-base leading-relaxed text-cream/70">A book-to-screen conversation begins with the story. We help authors consider adaptation potential, character development and whether the project is ready for a professional submission discussion.</p>
       </div>
     </section>
-    <section className="mx-auto max-w-5xl px-6 py-24 lg:px-10">
-      <h2 className="text-3xl sm:text-4xl">A grounded first assessment</h2>
-      <div className="mt-10 space-y-6">
-        {[
-          ["Story and format", "Discuss the central premise, characters, themes and the formats that might suit the material."],
-          ["Rights and readiness", "Identify the rights position and information that should be clarified before any external approach."],
-          ["Presentation materials", "Consider a concise synopsis and project overview suitable for a later professional conversation."],
-        ].map(([title,description]) => <article key={title} className="border-b border-border pb-6"><h3 className="text-xl">{title}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{description}</p></article>)}
+    <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+      <p className="eyebrow">The assessment pathway</p>
+      <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        {stages.map(([title,description],i) => <article key={title} className="border-t border-gold/50 pt-6"><span className="font-display text-2xl text-gold">0{i+1}</span><h2 className="mt-4 text-xl">{title}</h2><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{description}</p></article>)}
       </div>
-      <p className="mt-10 text-sm leading-relaxed text-muted-foreground">This service is an initial editorial and preparation conversation. Fourth Group &amp; Co does not promise representation, a producer attachment, an option, a sale, financing, casting or a film or television production.</p>
-      <Link to="/contact" className="mt-10 inline-block bg-navy px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-cream hover:bg-navy-deep">Discuss screen potential</Link>
+      <div className="mt-16 border border-border p-10 lg:p-14">
+        <h2 className="text-3xl">A realistic route from <span className="italic text-gold">page to screen.</span></h2>
+        <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">An assessment can help clarify a book’s adaptation potential and identify what may be needed for a submission. It does not guarantee representation, producer interest, an option, a sale, financing, casting or a film or television production. Representation or external submissions are only offered where genuine industry relationships and an appropriate written mandate are in place.</p>
+        <Link to="/contact" className="mt-9 inline-block bg-navy px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-cream hover:bg-navy-deep">Request a screen assessment</Link>
+      </div>
     </section>
     <Footer />
   </div>;
