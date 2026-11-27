@@ -6,7 +6,9 @@ export const Route = createFileRoute("/terms")({
   head: () => ({ meta: [
     { title: "Terms & Conditions | Fourth Group & Co" },
     { name: "description", content: "General terms for using the Fourth Group & Co website and enquiring about services." },
-  ] }),
+  ],
+    links: [{ rel: "canonical", href: "https://fourthgroup.co/terms" }],
+  }),
   component: Terms,
 });
 
