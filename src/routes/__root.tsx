@@ -85,7 +85,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: "Fourth Group & Co" },
       { name: "theme-color", content: "#101b2b" },
-      { property: "og:site_name", content: "Fourth Group & Co" },
       { property: "og:title", content: "Fourth Group & Co | Author Marketing Studio" },
       {
         property: "og:description",
