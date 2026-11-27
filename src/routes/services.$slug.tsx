@@ -36,7 +36,7 @@ function ServiceDetail() {
 
       <section className="surface-navy pt-40 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="eyebrow">Service {service.n}</p>
+          <p className="eyebrow">Service {service.n} · Fourth Group &amp; Co</p>
           <h1 className="mt-5 max-w-3xl text-5xl leading-[1.05] text-cream sm:text-6xl">
             {service.title}
           </h1>
