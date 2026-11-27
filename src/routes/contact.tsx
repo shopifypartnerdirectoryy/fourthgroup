@@ -11,7 +11,9 @@ export const Route = createFileRoute("/contact")({
     { name: "description", content: "Tell Fourth Group & Co about your book, launch goals and marketing needs. Request a tailored campaign proposal." },
     { property: "og:title", content: "Request a Campaign Proposal | Fourth Group & Co" },
     { property: "og:description", content: "Start a conversation about book promotion, publicity and author marketing." },
-  ] }),
+  ],
+    links: [{ rel: "canonical", href: "https://fourthgroup.co/contact" }],
+  }),
   component: Contact,
 });
 
