@@ -10,13 +10,13 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Goodreads Listopia promotion, cinematic book trailers, author website design and Amazon SEO optimisation from Fourth Group & Co.",
+          "Reader outreach, social promotion, book trailers, audiobook production, author websites and book listing optimisation from Fourth Group & Co.",
       },
       { property: "og:title", content: "Services | Fourth Group & Co" },
       {
         property: "og:description",
         content:
-          "Four author marketing disciplines: Listopia, trailers, author websites and Amazon SEO.",
+          "A full-service range of book promotion, publicity and author marketing services.",
       },
     ],
   }),
@@ -32,7 +32,7 @@ function Services() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <p className="eyebrow">Services</p>
           <h1 className="mt-5 max-w-3xl text-5xl leading-[1.05] text-cream sm:text-6xl">
-            Everything a book needs <span className="italic text-gold">after the last edit.</span>
+            Book promotion and publicity <span className="italic text-gold">built around your goals.</span>
           </h1>
           <div className="rule-gold mt-8 w-40" />
         </div>
