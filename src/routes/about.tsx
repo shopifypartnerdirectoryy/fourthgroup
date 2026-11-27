@@ -31,7 +31,7 @@ function About() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <p className="eyebrow">About</p>
           <h1 className="mt-5 max-w-3xl text-5xl leading-[1.05] text-cream sm:text-6xl">
-            A small studio, <span className="italic text-gold">by design.</span>
+            A full-service agency, <span className="italic text-gold">built around books.</span>
           </h1>
           <div className="rule-gold mt-8 w-40" />
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-cream/70">
