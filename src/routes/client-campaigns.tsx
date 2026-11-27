@@ -36,9 +36,9 @@ function ClientCampaigns() {
         {deliverables.map(([title,description],i) => <article key={title} className="bg-background p-10"><span className="font-display text-3xl text-gold/70">0{i+1}</span><h2 className="mt-5 text-2xl">{title}</h2><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{description}</p></article>)}
       </div>
       <div className="mt-20 border border-border p-10 lg:p-14">
-        <p className="eyebrow">Project examples</p>
+        <p className="eyebrow">Featured Client Campaigns</p>
         <h2 className="mt-5 text-3xl sm:text-4xl">Evidence before <span className="italic text-gold">endorsement.</span></h2>
-        <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">Client titles, cover artwork, campaign screenshots and performance figures are published only after they have been checked and the relevant rights-holder has approved their use. Until then, we share suitable approved examples privately where available.</p>
+        <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">Client titles, book covers, campaign screenshots and performance figures will be added here only after the project details have been verified and the relevant rights-holder has approved publication. We do not invent client campaigns or performance claims. Approved examples can be requested privately where available.</p>
         <Link to="/contact" className="mt-8 inline-block bg-navy px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-cream hover:bg-navy-deep">Request campaign examples</Link>
       </div>
     </section>
