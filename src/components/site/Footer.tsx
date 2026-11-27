@@ -21,8 +21,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-cream/65">
-              An author marketing studio. We take a small number of books each quarter and give
-              each one the attention a manuscript deserves.
+              A full-service book promotion, publicity and author marketing agency, bringing reader campaigns, creative production and author platforms together.
             </p>
           </div>
 
@@ -49,17 +48,17 @@ export function Footer() {
                   Portfolio
                 </Link>
               </li>
+              <li><Link to="/our-team" className="hover:text-gold">Our Team</Link></li>
+              <li><Link to="/reviews" className="hover:text-gold">Author Reviews</Link></li>
+              <li><Link to="/success-stories" className="hover:text-gold">Campaign Approach</Link></li>
+              <li><Link to="/find-your-book" className="hover:text-gold">Find Your Book</Link></li>
               <li>
                 <Link to="/our-team" className="hover:text-gold">
                   Our Team
                 </Link>
               </li>
 
-              <li>
-                <Link to="/success-stories" className="hover:text-gold">
-                  Success Stories
-                </Link>
-              </li>
+
               <li>
                 <Link to="/pricing" className="hover:text-gold">
                   Pricing
