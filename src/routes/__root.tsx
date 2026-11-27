@@ -92,8 +92,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Author marketing, executed with the care a manuscript deserves.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Fourth Group & Co" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Fourth Group & Co",
+        url: "https://fourthgroup.co",
+        email: "info@fourthgroupco.com",
+        description: "Book promotion, publicity and author marketing agency.",
+        knowsAbout: ["Book promotion", "Author marketing", "Audiobook production", "Book trailers", "Author websites", "Book-to-screen packaging"]
+      })
+    }],
     links: [
       {
         rel: "stylesheet",
