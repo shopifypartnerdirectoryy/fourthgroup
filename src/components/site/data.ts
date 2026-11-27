@@ -1,209 +1,58 @@
-import sariah from "@/assets/sariah.png.asset.json";
-import edith from "@/assets/edith.jpg.asset.json";
-import hannah from "@/assets/hannah.png.asset.json";
-
 export const services = [
-  {
-    n: "01",
-    slug: "goodreads-listopia",
-    title: "Goodreads Listopia Promotion",
-    blurb:
-      "The highest-leverage discovery surface in publishing, worked list by list until your book sits where readers browse.",
-    points: [
-      "Curated list targeting by genre and reader intent",
-      "Voting momentum built from real readers",
-      "Placement reporting with live, checkable links",
-    ],
-    price: "From $95",
-    note: "Placement packages",
-  },
-  {
-    n: "02",
-    slug: "book-trailers",
-    title: "Cinematic Book Trailers",
-    blurb:
-      "A short film that lets a reader feel the book before they ever open it — scripted from your manuscript, never a template.",
-    points: [
-      "Original score, colour grade and sound design",
-      "Cut for Instagram, TikTok, YouTube and Amazon",
-      "Written and storyboarded with the author",
-    ],
-    price: "Quoted per book",
-    note: "Bespoke production",
-  },
-  {
-    n: "03",
-    slug: "author-websites",
-    title: "Author Website Design",
-    blurb:
-      "A home that reads like a first edition: considered, quiet and unmistakably yours from the first scroll.",
-    points: [
-      "Bespoke editorial design, no themes",
-      "Newsletter, events and retailer integrations",
-      "Built to load fast on every device",
-    ],
-    price: "Quoted per build",
-    note: "Custom author site",
-  },
-  {
-    n: "04",
-    slug: "amazon-seo",
-    title: "Amazon SEO Optimisation",
-    blurb:
-      "Category, keyword and copy work that puts your book in front of the buyers already searching for it.",
-    points: [
-      "Backend keyword and category architecture",
-      "A+ content and description rewriting",
-      "Competitive rank tracking month to month",
-    ],
-    price: "Quoted per author",
-    note: "Listing and keyword work",
-  },
+  { n: "01", slug: "reader-email-campaigns", title: "Targeted Reader Email Campaigns", blurb: "Permission-based outreach to relevant, opted-in reader audiences, shaped around genre, readership and campaign goals.", points: ["Audience relevance and consent standards reviewed before launch", "Book positioning and campaign copy tailored to the title", "Delivery summary and transparent campaign reporting"], price: "Quoted per campaign", note: "Permission-based outreach" },
+  { n: "02", slug: "goodreads-listopia", title: "Goodreads Discovery & Listopia Placement", blurb: "Genre-aware Goodreads discovery campaigns that help readers encounter titles on relevant lists.", points: ["Relevant list research and shortlist", "Compliant reader engagement; no guaranteed rankings or votes", "Live placement links and campaign reporting"], price: "From $95", note: "Existing placement pricing retained" },
+  { n: "03", slug: "reader-book-challenges", title: "Interactive Reader Book Challenges", blurb: "A structured reader activity that invites participation around a book, series or launch.", points: ["Challenge concept and reader journey", "Prompts and campaign-ready creative", "Participation guidance and wrap-up report"], price: "Quoted per campaign", note: "Standard and premium scopes" },
+  { n: "04", slug: "tiktok-book-features", title: "TikTok Book Features", blurb: "Short-form book discovery features designed for TikTok audiences and genre communities.", points: ["Book positioning and short-form creative direction", "Creator or channel placement subject to availability and approval", "Post-campaign links and delivery summary"], price: "Quoted per feature", note: "TikTok-specific promotion" },
+  { n: "05", slug: "instagram-book-features", title: "Instagram Book Features", blurb: "Editorial-style book features for Instagram feeds, Reels and Stories.", points: ["Platform-native creative and caption direction", "Placement and publishing schedule agreed in advance", "Links and delivery confirmation"], price: "Quoted per feature", note: "Instagram-specific promotion" },
+  { n: "06", slug: "social-media-management", title: "Full-Service Social Media Management", blurb: "A managed social presence that gives authors a consistent, considered voice across agreed channels.", points: ["30-day content planning and calendar", "Copy and creative production for agreed platforms", "Scheduling, community guidance and monthly reporting"], price: "Quoted per month", note: "Scope agreed before work begins" },
+  { n: "07", slug: "book-trailers", title: "Cinematic Book Trailer Creation", blurb: "A short film that translates the atmosphere, stakes and emotional character of a book into a launch asset.", points: ["Concept, script and storyboard", "Editing, sound design and final master", "Versions sized for agreed social and retail placements"], price: "Quoted per production", note: "Existing trailer service retained" },
+  { n: "08", slug: "3d-book-mockups", title: "Editorial 3D Book Mockup Suite", blurb: "Polished 3D book visuals for author websites, launch campaigns, social content and promotional materials.", points: ["Front-cover and perspective mockups", "Coordinated promotional compositions", "Exported assets for agreed digital placements"], price: "Quoted per suite", note: "Creative production" },
+  { n: "09", slug: "audiobook-production", title: "Audiobook Production Services", blurb: "A guided production pathway from narration planning through edited, mastered audio files prepared to the agreed delivery specification.", points: ["Narrator and voice direction planning", "Recording, editing and audio quality review", "Mastering and platform-specification delivery preparation"], price: "Quoted per title", note: "Narration and production scope dependent" },
+  { n: "10", slug: "author-websites", title: "Bespoke Author Website Design", blurb: "An original author platform built around the writer's books, voice and reader journey.", points: ["Bespoke editorial design and responsive build", "Books, events, press and newsletter sections", "Search-friendly foundations and agreed integrations"], price: "Quoted per build", note: "Existing website service retained" },
+  { n: "11", slug: "author-website-redesign", title: "Author Website Overhaul & Redesign", blurb: "A considered refresh of an existing author website, improving structure, presentation and usability without losing important content.", points: ["Existing site and content review", "Information architecture and visual redesign", "Migration and launch checklist agreed before work"], price: "Quoted per redesign", note: "Existing platform and content assessed first" },
+  { n: "12", slug: "amazon-seo", title: "Amazon SEO & Book Listing Optimisation", blurb: "Listing and discoverability improvements that align book metadata and sales copy with relevant reader searches.", points: ["Keyword and category review", "Description and A+ content recommendations", "Changes documented; visibility or sales outcomes are not guaranteed"], price: "Quoted per title", note: "Existing optimisation service retained" },
 ];
 
 export const team = [
-  {
-    name: "Sariah Swanson",
-    role: "Founder & Campaign Director",
-    email: "sariahswanson.uk@gmail.com",
-    image: sariah.url,
-    bio: "Leads campaign strategy across Listopia, retail and launch planning, and personally scopes every book the studio takes on.",
-  },
-  {
-    name: "Edith Homer",
-    role: "Head of Film & Production",
-    email: "edithhomerr@gmail.com",
-    image: edith.url,
-    bio: "Runs trailer production end to end — script, score, edit and grade — so each film sounds the way the book reads.",
-  },
-  {
-    name: "Hannah Carter",
-    role: "Author Brand & Web Lead",
-    email: "hannahcelestecarter@gmail.com",
-    image: hannah.url,
-    bio: "Designs and builds author websites and shapes the listing copy that carries a book from browse to buy.",
-  },
+  { name: "Matthew Collins", role: "Founder & Managing Director", bio: "Leads the direction and development of Fourth Group & Co, setting the agency's standards for author care, creative quality and transparent delivery." },
+  { name: "Malik Bok", role: "Director of Author Campaigns", bio: "Coordinates author promotion programmes across reader outreach, discovery campaigns and launch planning, with a focus on clear scopes and accountable delivery." },
+  { name: "Bawa Fawaz", role: "Director of Production & Digital", bio: "Oversees the agency's creative and digital production work, including book trailers, author platforms and campaign assets." },
 ];
 
 export const process = [
-  {
-    step: "I",
-    title: "Read the book",
-    text: "Before anything is proposed, we read the manuscript and the market it lands in. Strategy comes out of the pages, not a deck.",
-  },
-  {
-    step: "II",
-    title: "Shape the campaign",
-    text: "One clear plan: the disciplines that matter for this title, the sequence they run in, and what each one is expected to move.",
-  },
-  {
-    step: "III",
-    title: "Make the work",
-    text: "Film, design, listings and placements are produced in house by the people who scoped them. Nothing is passed to a template.",
-  },
-  {
-    step: "IV",
-    title: "Report honestly",
-    text: "Live links, real positions, plain numbers. You always know where the book is and what happened next.",
-  },
+  { step: "I", title: "Understand the book", text: "We begin with the title, readership, publishing stage and goals before recommending a service or package." },
+  { step: "II", title: "Agree the scope", text: "Deliverables, schedule, responsibilities, permissions and price are confirmed before a campaign begins." },
+  { step: "III", title: "Create and deliver", text: "The agreed campaign assets and activities are produced with the author kept informed at each stage." },
+  { step: "IV", title: "Report clearly", text: "We provide the agreed links, assets and delivery summary, distinguishing completed work from outcomes outside our control." },
 ];
 
-export const serviceDetails: Record<
-  string,
-  { intro: string; deliverables: string[]; timeline: string; ideal: string }
-> = {
-  "goodreads-listopia": {
-    intro:
-      "Listopia is where readers browse by mood, genre and theme long before they browse by bestseller rank. We work your title onto the lists that match it and build genuine voting momentum behind it.",
-    deliverables: [
-      "List research and shortlist tailored to the book",
-      "Placement and voting campaign run over several weeks",
-      "Live link report so every position can be checked",
-      "Post-campaign position hold review",
-    ],
-    timeline: "Typically 3 to 6 weeks",
-    ideal: "Authors with a published title who need discovery rather than more ads.",
-  },
-  "book-trailers": {
-    intro:
-      "A trailer is a short film, not a slideshow. We read the manuscript, write the script from it, then score, shoot or source, edit and grade a piece that lets a reader feel the book.",
-    deliverables: [
-      "Script and storyboard written with the author",
-      "Original score and full sound design",
-      "Colour grade and final master",
-      "Cut-downs for Instagram, TikTok, YouTube and Amazon",
-    ],
-    timeline: "Typically 4 to 8 weeks",
-    ideal: "Launches, relaunches and awards pushes that need one strong asset.",
-  },
-  "author-websites": {
-    intro:
-      "Your website is the only place online you fully control. We design and build an editorial home that reads like a first edition and turns visitors into subscribers.",
-    deliverables: [
-      "Bespoke design, no themes or page builders",
-      "Books, events and press sections",
-      "Newsletter and retailer integrations",
-      "Fast, accessible build with SEO groundwork",
-    ],
-    timeline: "Typically 4 to 6 weeks",
-    ideal: "Authors with more than one title, or a launch that needs a proper home.",
-  },
-  "amazon-seo": {
-    intro:
-      "Most books are invisible because of their categories and keywords, not their writing. We rebuild the listing around how buyers in your genre actually search.",
-    deliverables: [
-      "Backend keyword and category architecture",
-      "Title, subtitle and description rewriting",
-      "A+ content layout and copy",
-      "Monthly competitive rank tracking",
-    ],
-    timeline: "Typically 1 to 2 weeks, then monthly review",
-    ideal: "Published titles with good reviews but weak visibility.",
-  },
+export const serviceDetails: Record<string, { intro: string; deliverables: string[]; timeline: string; ideal: string }> = {
+  "reader-email-campaigns": { intro: "Targeted reader email campaigns are built around relevance and permission. We identify an appropriate audience approach, prepare book-led messaging and agree the campaign scope before any outreach.", deliverables: ["Audience and consent approach review", "Book positioning and email copy", "Campaign schedule and delivery summary", "Opt-out and suppression handling in accordance with applicable requirements"], timeline: "Agreed per campaign", ideal: "Authors seeking relevant, permission-based reader outreach." },
+  "goodreads-listopia": { intro: "Goodreads discovery work focuses on relevant lists and transparent reporting. Placement and reader activity depend on platform rules and genuine reader choices; rankings and votes are never guaranteed.", deliverables: ["List research and shortlist tailored to the book", "Campaign coordination and progress checks", "Live links to relevant placements", "End-of-campaign summary"], timeline: "Typically 3 to 6 weeks", ideal: "Published authors looking to improve relevant reader discovery." },
+  "reader-book-challenges": { intro: "Interactive book challenges give readers a structured way to explore a title or series through prompts and participation. The format is planned around the book and the audience.", deliverables: ["Challenge concept and participation structure", "Reader prompts and promotional copy", "Creative direction and launch schedule", "Participation and delivery summary"], timeline: "Agreed per campaign", ideal: "Authors launching a series, building reader engagement or supporting a themed promotion." },
+  "tiktok-book-features": { intro: "TikTok book features translate a book's hook and genre into short-form discovery creative. Any creator, account, posting date or reach commitment is confirmed in writing before booking.", deliverables: ["TikTok-specific positioning and creative brief", "Approved caption and feature assets", "Placement coordination where agreed", "Published link or delivery confirmation"], timeline: "Agreed per feature", ideal: "Authors whose readers actively discover books through short-form video." },
+  "instagram-book-features": { intro: "Instagram features present a book through feed, Reel or Story formats selected for the title and campaign. Deliverables and publishing arrangements are confirmed before work begins.", deliverables: ["Instagram creative direction", "Caption and visual asset preparation", "Placement coordination where agreed", "Published link or delivery confirmation"], timeline: "Agreed per feature", ideal: "Authors seeking visual book discovery and launch support on Instagram." },
+  "social-media-management": { intro: "Full-service social media management provides a planned, consistent publishing rhythm across the channels agreed with the author. The scope defines content volume, approval windows and community responsibilities.", deliverables: ["Channel and audience review", "30-day calendar and content plan", "Agreed posts, captions and creative assets", "Scheduling and monthly activity summary"], timeline: "30-day cycles or agreed retainer", ideal: "Authors who want consistent social content without managing every publishing task themselves." },
+  "book-trailers": { intro: "A cinematic trailer turns the tone and central promise of a book into a short promotional film. The creative concept, asset rights, duration and formats are agreed with the author.", deliverables: ["Creative concept, script and storyboard", "Editing and sound design", "Author review and agreed revisions", "Final master and agreed cut-down formats"], timeline: "Typically 4 to 8 weeks", ideal: "Book launches, relaunches and campaigns that need a strong visual asset." },
+  "3d-book-mockups": { intro: "The Editorial 3D Book Mockup Suite creates polished, consistent book visuals from supplied cover artwork for use across digital author and launch materials.", deliverables: ["3D cover and perspective mockups", "Coordinated promotional compositions", "Digital exports in agreed sizes", "Usage and file handover notes"], timeline: "Agreed per suite", ideal: "Authors and publishers who need professional book visuals for promotion." },
+  "audiobook-production": { intro: "Audiobook production is scoped title by title. We help plan narration, coordinate recording and editing, review audio quality and prepare mastered files to the agreed platform specification. Distribution, retailer acceptance and sales are not guaranteed.", deliverables: ["Narration brief and voice direction", "Recording and editing coordination", "Quality review and mastering", "Delivery files prepared to the agreed specification"], timeline: "Depends on manuscript length, narrator and production schedule", ideal: "Authors preparing a new audiobook or adapting an existing book for audio." },
+  "author-websites": { intro: "A bespoke author website gives readers, media and publishing partners a clear home for the author's books and work. Each build is scoped around content, features and integrations.", deliverables: ["Site structure and bespoke visual direction", "Responsive page design and build", "Books, biography, events and press sections as agreed", "SEO foundations and handover"], timeline: "Typically 4 to 6 weeks, depending on scope", ideal: "Authors who need a dedicated platform they control." },
+  "author-website-redesign": { intro: "A website overhaul begins with an audit of the existing site so valuable content, URLs and integrations are not discarded without a plan. The redesign then improves presentation and reader journeys.", deliverables: ["Existing site and content inventory", "Design and navigation improvements", "Migration and redirect plan where required", "Pre-launch checks and handover"], timeline: "Agreed after the initial site review", ideal: "Authors with an existing site that no longer reflects their work or goals." },
+  "amazon-seo": { intro: "Amazon listing optimisation reviews metadata and sales copy for relevance to the book and its intended readership. Search placement, rankings and sales remain subject to Amazon and market conditions.", deliverables: ["Keyword and category research", "Description and metadata recommendations", "A+ content direction where applicable", "Change log and review recommendations"], timeline: "Typically 1 to 2 weeks for initial work", ideal: "Authors seeking a more coherent, reader-focused retail listing." },
 };
 
 export const faqs = [
-  {
-    q: "How many books do you take on?",
-    a: "A small number each quarter. We would rather turn a book down than give it half the attention it needs.",
-  },
-  {
-    q: "Do you read the manuscript first?",
-    a: "Always. Nothing is proposed and nothing is priced until we have read the book and looked at the market it lands in.",
-  },
-  {
-    q: "Can I book a single service?",
-    a: "Yes. Listopia, trailers, websites and Amazon work can each run on their own, or be sequenced into one campaign.",
-  },
-  {
-    q: "What does it cost?",
-    a: "Listopia placement packages start from $95. Trailers, websites and listing work are quoted per book once we know the scope.",
-  },
-  {
-    q: "How do I see results?",
-    a: "Live links and real positions. You can check every placement yourself, during the campaign and after it ends.",
-  },
-  {
-    q: "Do you work with debut authors?",
-    a: "Often. A first book with a clear reader is easier to move than a fifth with none.",
-  },
+  { q: "Can I book one service on its own?", a: "Yes. Every service can be scoped individually. Packages combine selected services but do not remove the option to commission a single service." },
+  { q: "Are reader email campaigns permission-based?", a: "Yes. Audience sourcing and outreach must follow applicable consent, privacy and opt-out requirements. We do not sell or promise access to scraped or unlawfully obtained personal data." },
+  { q: "Do you guarantee bestseller rankings, votes or sales?", a: "No. We commit to agreed deliverables and transparent reporting, not outcomes controlled by platforms, readers or market conditions." },
+  { q: "Can you produce an audiobook?", a: "We can scope narration planning, recording, editing, quality review and mastering. Final distribution and platform acceptance depend on the relevant retailer requirements." },
+  { q: "Can you help assess a book for screen adaptation?", a: "We can provide an initial editorial assessment of adaptation potential. This is not a guarantee of representation, an option, a sale or a film or television production." },
+  { q: "How are prices confirmed?", a: "Existing published prices remain as stated. Bespoke work is quoted after the title, requirements and deliverables have been reviewed." },
 ];
 
 export const reasons = [
-  {
-    title: "We read before we pitch",
-    text: "Strategy comes out of the manuscript, not a template deck reused from the last client.",
-  },
-  {
-    title: "Made in house",
-    text: "The people who scope the work make the work. Nothing is passed to a freelancer marketplace.",
-  },
-  {
-    title: "Checkable reporting",
-    text: "Live links and plain numbers. If a position moved, you can see it yourself.",
-  },
-  {
-    title: "A short client list",
-    text: "Capacity is deliberately limited so every book keeps a director's attention.",
-  },
+  { title: "Book-led recommendations", text: "We begin with the book and its intended readers before recommending a campaign." },
+  { title: "Clear scopes", text: "Deliverables, timing, permissions and responsibilities are agreed before work starts." },
+  { title: "Transparent reporting", text: "We distinguish work delivered from results that depend on platforms and reader behaviour." },
+  { title: "Services that stand alone", text: "Authors can commission an individual service or combine them into a broader launch plan." },
 ];
