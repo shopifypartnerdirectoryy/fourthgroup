@@ -16,6 +16,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Thoughtful promotion, publicity and creative production for authors and their books." },
       { property: "og:type", content: "website" },
     ],
+      links: [{ rel: "canonical", href: "https://fourthgroup.co/" }],
   }),
   component: Home,
 });
