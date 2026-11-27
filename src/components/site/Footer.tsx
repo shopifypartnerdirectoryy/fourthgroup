@@ -30,6 +30,11 @@ export function Footer() {
             <h3 className="eyebrow">Studio</h3>
             <ul className="mt-5 space-y-3 text-sm text-cream/70">
               <li>
+                <Link to="/client-campaigns" className="hover:text-gold">Client Campaigns</Link>
+              </li>
+              <li><Link to="/audiobook-production" className="hover:text-gold">Audiobook Production</Link></li>
+              <li><Link to="/movie-adaptation" className="hover:text-gold">Screen Opportunities</Link></li>
+              <li>
                 <Link to="/services" className="hover:text-gold">
                   Services
                 </Link>
@@ -81,7 +86,7 @@ export function Footer() {
                   info@fourthgroupco.com
                 </a>
               </li>
-              <li>Replies in under one hour</li>
+
               <li>
                 <Link to="/contact" className="hover:text-gold">
                   Submit your manuscript
