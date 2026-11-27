@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { services, process, faqs } from "@/components/site/data";
+import { launchPackages } from "@/components/site/showcase";
 import heroAsset from "@/assets/hero-library.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -36,14 +37,14 @@ function Home() {
         <div className="relative mx-auto w-full max-w-7xl px-6 pb-24 pt-40 lg:px-10">
           <p className="eyebrow">Book Promotion · Publicity · Author Marketing</p>
           <h1 className="mt-7 max-w-4xl text-5xl leading-[1.02] text-cream sm:text-6xl lg:text-7xl">
-            Give your book <span className="italic text-gold">the audience</span> it deserves.
+            Your Story Deserves <span className="italic text-gold">a Wider Audience.</span>
           </h1>
           <div className="rule-gold mt-8 w-40" />
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-cream/75">
             Fourth Group &amp; Co is a full-service book promotion and author marketing agency. We bring strategy, creative production and reader-focused campaigns together around each title — from first announcement to long-term discovery.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link to="/contact" className="group inline-flex items-center gap-3 bg-gold px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-navy-deep transition-colors hover:bg-gold-soft">Discuss your book <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></Link>
+            <Link to="/contact" className="group inline-flex items-center gap-3 bg-gold px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-navy-deep transition-colors hover:bg-gold-soft">Request a Campaign Proposal <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></Link>
             <Link to="/services" className="inline-flex items-center border border-cream/30 px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-cream transition-colors hover:border-gold hover:text-gold">Explore services</Link>
           </div>
         </div>
@@ -75,6 +76,18 @@ function Home() {
               <Link to="/services/$slug" params={{slug:s.slug}} className="mt-7 inline-flex items-center gap-2 text-[0.66rem] uppercase tracking-[0.18em] text-gold">Explore service <ArrowRight className="h-3.5 w-3.5" /></Link>
             </article>)}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+        <p className="eyebrow">Signature launch packages</p>
+        <h2 className="mt-5 max-w-3xl text-4xl sm:text-5xl">A clear starting point for <span className="italic text-gold">your campaign.</span></h2>
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          {launchPackages.map(p => <article key={p.name} className="flex flex-col border border-border p-8">
+            <h3 className="text-2xl">{p.name}</h3><p className="mt-5 font-display text-4xl text-gold">{p.price}</p>
+            <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{p.summary}</p>
+            <Link to="/pricing" className="mt-7 text-[0.66rem] uppercase tracking-[0.18em] text-navy hover:text-gold">View package details →</Link>
+          </article>)}
         </div>
       </section>
 
