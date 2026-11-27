@@ -20,6 +20,7 @@ export const Route = createFileRoute("/our-team")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+      links: [{ rel: "canonical", href: "https://fourthgroup.co/our-team" }],
   }),
   component: OurTeam,
 });
