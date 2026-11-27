@@ -6,7 +6,9 @@ export const Route = createFileRoute("/privacy")({
   head: () => ({ meta: [
     { title: "Privacy Policy | Fourth Group & Co" },
     { name: "description", content: "How to contact Fourth Group & Co about information shared in an enquiry." },
-  ] }),
+  ],
+    links: [{ rel: "canonical", href: "https://fourthgroup.co/privacy" }],
+  }),
   component: Privacy,
 });
 
